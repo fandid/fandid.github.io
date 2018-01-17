@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="tech,hexo,github," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="faradk" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="前几天一直在折腾静态博客，相比wordpress之类臃肿的动态博客来说，static website越来越成为个人博客、轻量级博客的首选。在接触hexo和github之前，一直用的是dropbox+droppages的形式搭建静态页面。这种形式足够简洁，本地生成markdown后直接在文件夹内更新，省去在线编辑和修改的限制。droppages本身提供了几个theme，可修改css等文件，当然排版方">
+<meta name="keywords" content="tech,hexo,github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo+github">
+<meta property="og:url" content="http://yoursite.com/2017/11/20/hexo+github/index.html">
+<meta property="og:site_name" content="faradk">
+<meta property="og:description" content="前几天一直在折腾静态博客，相比wordpress之类臃肿的动态博客来说，static website越来越成为个人博客、轻量级博客的首选。在接触hexo和github之前，一直用的是dropbox+droppages的形式搭建静态页面。这种形式足够简洁，本地生成markdown后直接在文件夹内更新，省去在线编辑和修改的限制。droppages本身提供了几个theme，可修改css等文件，当然排版方">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-11-21T01:18:04.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo+github">
+<meta name="twitter:description" content="前几天一直在折腾静态博客，相比wordpress之类臃肿的动态博客来说，static website越来越成为个人博客、轻量级博客的首选。在接触hexo和github之前，一直用的是dropbox+droppages的形式搭建静态页面。这种形式足够简洁，本地生成markdown后直接在文件夹内更新，省去在线编辑和修改的限制。droppages本身提供了几个theme，可修改css等文件，当然排版方">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/11/20/hexo+github/"/>
+
+
+
+
+
+  <title>hexo+github | faradk</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">faradk</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/20/hexo+github/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="faradk">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="faradk">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">hexo+github</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-20T18:28:36+08:00">
+                2017-11-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/tech/" itemprop="url" rel="index">
+                    <span itemprop="name">tech</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/11/20/hexo+github/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/11/20/hexo+github/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>前几天一直在折腾静态博客，相比wordpress之类臃肿的动态博客来说，static website越来越成为个人博客、轻量级博客的首选。在接触hexo和github之前，一直用的是<code>dropbox+droppages</code>的形式搭建静态页面。这种形式足够简洁，本地生成markdown后直接在文件夹内更新，省去在线编辑和修改的限制。droppages本身提供了几个theme，可修改css等文件，当然排版方面非常简陋，如果只是专注于写作、文字，droppages足够了，重点是真的很方便。（与后面hexo一比就能感受到）</p>
+<p>下面来说说hexo和github的搭建过程，也算做个记录。之所以会接触这些，也是因为droppages配置太简陋。当然首要选择还是希望有dropbox+something的组合，可惜除了droppages，没有找到什么合适的。寻找期间，尝试了evernote+postach.io的形式，也还不错，不过始终觉得别扭，也许对evernote没啥好感？然后尝试了farbox的最新产品bitcron，据说很多人都从其他平台迁移至bitcron，我试用了一下还行，就是价格感觉不太适合轻量级用户，对我这种经常折腾的人来说也不太实用，放弃。<br>没办法，只能自己动手搭一个了，在jekyll，hexo，hugo，octopress，ghost等众多框架中，我选了hexo，一来相对难度小一点，小白多钻研一下也可以弄明白；二来hexo基于node.js环境，对于Windows友好一点，而jekyll基于ruby，在windows上配置起来要繁琐一些。更重要的是hexo好看啊，充分展现了simple is beautiful</p>
+<p>虽说hexo简单一些，但搭起来也处处是坑，第一遍啥也不懂结果费了半天劲404了，第二遍大概用了二十分钟就搭好了。前期准备工作做好之后搭起来就特别快，找一个好的教程也很重要，很多小问题基本google都能解决。</p>
+<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><ul>
+<li>安装node.js和git<br>这是hexo搭建的基础，首先要安装node.js和git。按照<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">hexo官网</a>文档中的流程一步一步来，基本没什么问题。</li>
+</ul>
+<h2 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h2><ul>
+<li>安装hexo<br>利用npm安装hexo 具体命令为<br><code>$ npm install -g hexo-cli</code> </li>
+<li><p>建立站点<br>有过droppages的使用经验就很容易理解这一步要干嘛了。简单来说，一个文件夹就是一个website，就是一个blog，里面放了你网站的所有内容。这个文件夹可以自定义位置和名称。你可以放到任何一个你想要的盘里，命名为hexo或其他任何名称，打开此文件夹，shift+鼠标右键会出现<code>在此处打开命令窗口</code>的字样，点击会出现控制台，执行命令<br><code>$ hexo init &lt;folder&gt;</code><br><code>$ cd &lt;folder&gt;</code><br><code>$ npm install</code><br>folder为你自定义的文件夹名称 例如 <code>$ hexo init dd</code><br>如果你没有事先建立文件夹，直接执行命令，hexo会按照你自定义的名称自动创建文件夹，一般是在C/user/administrator目录下。<br>这一步完成后可以看到文件夹里已生成基本的配置文件。</p>
+</li>
+<li><p>自定义配置及主题更换<br>打开根目录，找到<code>_config.yml</code> 这是站点的主配置文件，可以自定义网站title，author name等<br>主题设置默认为landscape，hexo提供了很多好看简洁的theme，可根据要求自己选择<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo theme</a> 在众多theme里我选了NexT这款主题，也是公认为hexo中最漂亮最简洁的一个主题 附上地址<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT</a>里边有关于主题各部分的配置内容，可参阅。以NexT为例，下载好主题，然后解压至根目录的themes文件夹，将解压后的文件重命名为next，然后在站点配置文件<code>_config.yml</code>中将<code>theme： landscape</code> 修改为<code>theme： next</code> 即可成功切换。打开themes中next文件夹，里边也有个<code>_config.yml</code>，这个是主题配置文件，可自定义修改主题。NexT主题本身有四个方案，在<code>_config.yml</code>里找到# Schemes可以看到有Muse，Mist，Pisces，Gemini四个方案，依个人喜好选择，启用哪个将#删除即可</p>
+</li>
+<li><p>本地预览<br>第一次搭建时可先本地预览下初步成果，熟练后可将所有自定义配置完一并预览然后部署，顺序不重要，依个人习惯。本地预览时主要用到以下三个命令<br><code>$ hexo clean</code>清除缓存文件（这步也可省略，我的习惯是生成前都clean一下，当你发现修改某些东西后站点未发生变化或未生效，可执行clean）<br><code>$ hexo generate</code> 生成静态文件 可简写成hexo g<br><code>$ hexo server</code> 本地预览 默认地址为<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a><br>启用本地预览可以看到站点的一些变化，我的建议是不要急着deploy，先在本地预览，一切都没问题后再进行部署。</p>
+</li>
+<li><p>主题的具体设置<br>本地预览后你可能会发现网站还是非常简陋，想要内容更加丰富，可在主题配置文件里进行一些修改。（主要包括新建page，自定义tag和category，自定义social，增加rss，disqus插件，首页隐藏文章等）</p>
+<ul>
+<li>新建page<br>打开主题配置文件 可以看到menu的设置中有home，about，categories，tags，archives等文本，可自行选择启用或不启用。值得注意的是，启用主题配置文件中about，tags等文本并不代表可以直接在站点上显示，还需在根目录source文件夹创建相应的page才可。以tags为例，应用命令<code>$ hexo new page tags</code>，可以看到source文件夹中多了tags文件，打开，新增<code>type: &quot;tags&quot;</code> 这下可以正常显示tags页面了，其他about页面同理。</li>
+<li>修改post默认模板<br>生成新文章时，使用<code>$ hexo new &quot;xxx&quot;</code>命令<br>想要新建文章时默认添加tags，categories等文本，需要打开根目录scaffolds文件夹中的post文件，增加<code>tags:</code> 、<code>categories:</code> 字段即可，下次新建文章时不用再手动添加这两项，节省时间。</li>
+<li>自定义social<br>next主题提供了许多social的默认项，打开主题配置文件，在social项中可自定义想要展示的social链接，有github，facebook，instagram，email等多个链接，还可以自定义 social icon，附上<a href="http://fontawesome.io/3.2.1/" target="_blank" rel="noopener">fontawesome</a>的链接，可以替换自己喜欢的图标。</li>
+<li><p>添加rss<br>hexo提供了rss的生成插件 <code>hexo-generator-feed</code> 可参阅<a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">官方教程</a><br>首先执行命令<code>$ npm install hexo-generator-feed --save</code> 然后可在站点配置文件里Plugins行下添加字段 注意缩进</p>
+<blockquote>
+<p>feed:<br>type: atom<br>path: atom.xml<br>limit: 20</p>
+</blockquote>
+<p>然后在主题配置文件<code>rss:</code>后添加<code>&quot;/atom.xml&quot;</code> rss即可添加成功</p>
+</li>
+<li>添加disqus评论插件<br>首先要有<a href="https://disqus.com/" target="_blank" rel="noopener">disqus</a>账号，在setting中点击<code>add disqus to site</code> 设置shortname（可简短一些，便于设置），添加你网站的url，然后在主题配置文件disqus项中填写你的shortname 以及将 <code>enable:false</code>改为<code>enable:true</code> 成功开启评论插件</li>
+<li>控制首页文章显示字数<br>如果文章很长的话，在首页显示全部字数不是很美观。想设置<code>read more</code>可在主题配置文件中将<code>auto_excerpt:</code>设置为<code>enable:true</code> 即可开启<code>read more</code></li>
+<li>隐藏首页特定文章<br>受此文章启发-<a href="http://forwardkth.github.io/2016/05/08/next-theme-post-visibility/" target="_blank" rel="noopener">关于Hexo next主题如何在首页隐藏指定的文章</a> 详情参阅。</li>
+</ul>
+<p>至此，自定义主题的配置项已基本涵盖，其他需要请自行查阅<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo</a>和<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">next</a>相关说明</p>
+</li>
+</ul>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>  本地阅览完，接下来要deploy到github pages 说白了hexo就是本地生成静态文件，然后再push到github  </p>
+<ul>
+<li><p>github准备<br>先准备好github pages一些基本配置，到后面deploy可以节省一些时间。首先你要有个github账号（github真的是一个利器，即使不是程序猿，了解它版本控制的核心思想也是非常有用的） ，然后新建repository，为便于部署，推荐repository name设置为 username.github.io</p>
+</li>
+<li><p>deploy<br>参阅hexo文档<a href="https://hexo.io/zh-cn/docs/deployment.html" target="_blank" rel="noopener">部署</a><br>首先要在站点配置文件<code>deploy:</code>下修改<code>type:</code>为<code>type: git</code><br>执行命令<code>$ npm install hexo-deployer-git --save</code>安装hexo-deployer-git 然后在站点配置文件<code>type: git</code>下增加字段</p>
+<blockquote>
+<p> repo: （你的repository地址，可在github查看，默认形式为<a href="https://github.com/username/username.github.io.git）" target="_blank" rel="noopener">https://github.com/username/username.github.io.git）</a><br>  branch: master （默认分支为master）<br>  message: <code>&quot;&amp;#123;&amp;#123; now&amp;#40;&#39;YYYY-MM-DD HH:mm:ss&#39;&amp;#41; &amp;#125;&amp;#125; &quot;</code></p>
+</blockquote>
+<p>配置好后即可部署<br>deploy命令为<code>$ hexo deploy</code> 可简写为hexo d</p>
+<p>至此整个静态网站就搭好了，输入github pages即可查看</p>
+</li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li><p>hexo优缺点<br>优点当然是简洁简洁简洁好看好看好看<br>缺点（与droppages体验相比）</p>
+<ul>
+<li>发布文章虽然已经很简单了，但相比直接markdown丢到dropbox的方式仍然要多了几条命令</li>
+<li>不能手机编辑</li>
+<li>每次稍微改动一下就得重新generate deploy 不如dropbox方便</li>
+<li>换电脑后需要重新配置环境，不方便多端同步</li>
+</ul>
+</li>
+<li><p>关于github和coding<br>github很多优秀的程序员都在用，如果觉得不太习惯可以用国内<a href="https://coding.net/" target="_blank" rel="noopener">coding</a>代替 相比github来说，coding的响应速度绝对没的说，另外github的私有库是要收费的，而coding可拥有两个免费的私有库。coding也提供静态pages和动态pages的服务，可结合hexo+github的方法将hexo部署到coding静态pages，动态pages可部署wordpress，目前官方正在公测动态pages，之后可能采取收费模式。不论是github还是coding，我想说的是这种版本控制的idea实在值得我们每个人学习，对于学生党来说，不失为写论文的利器。</p>
+</li>
+<li><p>关于error<br>出现error不用着急 可先结合error info查找问题 注意中英文转换、空格、缩进等问题，其他问题大部分可google解决 （还是之前说的，拿不准可先localhost预览，没问题再deploy以减少错误发生）</p>
+</li>
+<li><p>关于图床<br>可用七牛云</p>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/tech/" rel="tag"># tech</a>
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+            <a href="/tags/github/" rel="tag"># github</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/26/空中小姐摘录/" rel="next" title="空中小姐摘录">
+                <i class="fa fa-chevron-left"></i> 空中小姐摘录
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/15/about thesis/" rel="prev" title="about thesis">
+                about thesis <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">faradk</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/faradk" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:fadeinside193@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://instagram.com/faradk23" target="_blank" title="Instagram">
+                      
+                        <i class="fa fa-fw fa-instagram"></i>Instagram</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.eyeem.com/u/hadidjam" target="_blank" title="EyeEm">
+                      
+                        <i class="fa fa-fw fa-camera-retro"></i>EyeEm</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前期准备"><span class="nav-number">1.</span> <span class="nav-text">前期准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建站"><span class="nav-number">2.</span> <span class="nav-text">建站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署"><span class="nav-number">3.</span> <span class="nav-text">部署</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">4.</span> <span class="nav-text">其他</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">faradk</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://faradk.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2017/11/20/hexo+github/';
+          this.page.identifier = '2017/11/20/hexo+github/';
+          this.page.title = 'hexo+github';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://faradk.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
