@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="marknotes,book," />
+  <meta name="keywords" content="tech,hexo,github,AppVeyor," />
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="第一次看伊坂的作品，刚开始只是单纯被书的名字吸引，从来没有想到它会是一部推理作品，看完后，又觉得不仅仅是一部推理作品那么简单，它引起共鸣的地方那么多，我不能不写下来。 故事情节不详述，我觉得它最有魅力的地方并不在于故事的情节安排有多么精妙，恰恰是一个平凡普通却又引起共鸣的故事才直击人心。说到底，这是一个我们每个人在一生中都会遇到的境况，当被别人误解，当不被信任，当所有的不利都指向你时，你该怎么做，">
-<meta name="keywords" content="marknotes,book">
+<meta name="description" content="前面介绍过如何用hexo＋github生成静态page，今天小小总结一下如何用Appveyor持续集成，解决hexo多端同步的问题。 hexo＋github好归好，但多端同步始终是困扰大多数人的一个问题。hexo的一切活动都依赖于本地构建的git和node.js环境，之后再将hexo生成的静态page托管到github上。如果出现换电脑、重装系统等情况，只能重新搭建环境，这样未免有些麻烦。受此文章">
+<meta name="keywords" content="tech,hexo,github,AppVeyor">
 <meta property="og:type" content="article">
-<meta property="og:title" content="金色梦乡">
-<meta property="og:url" content="http://yoursite.com/2017/03/22/金色梦乡/index.html">
+<meta property="og:title" content="AppVeyor持续集成">
+<meta property="og:url" content="http://yoursite.com/2018/01/20/AppVeyor持续集成/index.html">
 <meta property="og:site_name" content="faradk">
-<meta property="og:description" content="第一次看伊坂的作品，刚开始只是单纯被书的名字吸引，从来没有想到它会是一部推理作品，看完后，又觉得不仅仅是一部推理作品那么简单，它引起共鸣的地方那么多，我不能不写下来。 故事情节不详述，我觉得它最有魅力的地方并不在于故事的情节安排有多么精妙，恰恰是一个平凡普通却又引起共鸣的故事才直击人心。说到底，这是一个我们每个人在一生中都会遇到的境况，当被别人误解，当不被信任，当所有的不利都指向你时，你该怎么做，">
+<meta property="og:description" content="前面介绍过如何用hexo＋github生成静态page，今天小小总结一下如何用Appveyor持续集成，解决hexo多端同步的问题。 hexo＋github好归好，但多端同步始终是困扰大多数人的一个问题。hexo的一切活动都依赖于本地构建的git和node.js环境，之后再将hexo生成的静态page托管到github上。如果出现换电脑、重装系统等情况，只能重新搭建环境，这样未免有些麻烦。受此文章">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-01-20T12:51:58.642Z">
+<meta property="og:updated_time" content="2018-01-20T12:51:58.610Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="金色梦乡">
-<meta name="twitter:description" content="第一次看伊坂的作品，刚开始只是单纯被书的名字吸引，从来没有想到它会是一部推理作品，看完后，又觉得不仅仅是一部推理作品那么简单，它引起共鸣的地方那么多，我不能不写下来。 故事情节不详述，我觉得它最有魅力的地方并不在于故事的情节安排有多么精妙，恰恰是一个平凡普通却又引起共鸣的故事才直击人心。说到底，这是一个我们每个人在一生中都会遇到的境况，当被别人误解，当不被信任，当所有的不利都指向你时，你该怎么做，">
+<meta name="twitter:title" content="AppVeyor持续集成">
+<meta name="twitter:description" content="前面介绍过如何用hexo＋github生成静态page，今天小小总结一下如何用Appveyor持续集成，解决hexo多端同步的问题。 hexo＋github好归好，但多端同步始终是困扰大多数人的一个问题。hexo的一切活动都依赖于本地构建的git和node.js环境，之后再将hexo生成的静态page托管到github上。如果出现换电脑、重装系统等情况，只能重新搭建环境，这样未免有些麻烦。受此文章">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/22/金色梦乡/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/20/AppVeyor持续集成/"/>
 
 
 
 
 
-  <title>金色梦乡 | faradk</title>
+  <title>AppVeyor持续集成 | faradk</title>
   
 
 
@@ -265,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/22/金色梦乡/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/20/AppVeyor持续集成/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="faradk">
@@ -282,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">金色梦乡</h1>
+          <h1 class="post-title" itemprop="name headline">AppVeyor持续集成</h1>
         
 
         <div class="post-meta">
@@ -294,8 +294,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-22T20:18:01+00:00">
-                2017-03-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-20T17:59:47+00:00">
+                2018-01-20
               </time>
             
 
@@ -317,8 +317,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/book/" itemprop="url" rel="index">
-                    <span itemprop="name">book</span>
+                  <a href="/categories/tech/" itemprop="url" rel="index">
+                    <span itemprop="name">tech</span>
                   </a>
                 </span>
 
@@ -335,9 +335,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/22/金色梦乡/#comments" itemprop="discussionUrl">
+                <a href="/2018/01/20/AppVeyor持续集成/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/03/22/金色梦乡/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/01/20/AppVeyor持续集成/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -365,23 +365,64 @@
       
 
       
-        <p>第一次看伊坂的作品，刚开始只是单纯被书的名字吸引，从来没有想到它会是一部推理作品，看完后，又觉得不仅仅是一部推理作品那么简单，它引起共鸣的地方那么多，我不能不写下来。</p>
-<p>故事情节不详述，我觉得它最有魅力的地方并不在于故事的情节安排有多么精妙，恰恰是一个平凡普通却又引起共鸣的故事才直击人心。说到底，这是一个我们每个人在一生中都会遇到的境况，当被别人误解，当不被信任，当所有的不利都指向你时，你该怎么做，当这种境况上升至威胁生存程度，上升至你无法对抗的程度时，你还期望弄清所有的黑白曲直吗？能不能靠着智慧和毅力生存下来都是问题。这部书里有太多我想说的地方，下面分几个小部分，都是看到作者写的某一部分有感而发。</p>
+        <p>前面介绍过如何用hexo＋github生成静态page，今天小小总结一下如何用Appveyor持续集成，解决hexo多端同步的问题。</p>
+<p>hexo＋github好归好，但多端同步始终是困扰大多数人的一个问题。hexo的一切活动都依赖于本地构建的git和node.js环境，之后再将hexo生成的静态page托管到github上。如果出现换电脑、重装系统等情况，只能重新搭建环境，这样未免有些麻烦。受此文章<a href="https://formulahendry.github.io/2016/12/04/hexo-ci/#" target="_blank" rel="noopener">Hexo的版本控制与持续集成</a>启发，终于找到了合适的同步方法，主要是利用AppVeyor进行持续集成。</p>
+<h2 id="建立source-repo"><a href="#建立source-repo" class="headerlink" title="建立source repo"></a>建立source repo</h2><ul>
+<li>在github上新建repo作为source repo，source repo用来存放hexo源文件，当hexo源文件发生改变，AppVeyor将自动生成静态页面并push到content repo，即github上我们托管的静态页面，这样一来既对hexo源文件进行了备份，又避免了手动deploy的繁琐。</li>
+</ul>
+<h2 id="将源文件上传至source-repo"><a href="#将源文件上传至source-repo" class="headerlink" title="将源文件上传至source repo"></a>将源文件上传至source repo</h2><ul>
+<li>在本地hexo文件夹下通过git bash依次执行命令<br><code>git init</code>  （初始化仓库）<br><code>git add .</code> （将上传文件添加到暂存区，添加单个文件用 <code>git add test.txt</code>；添加所有文件则用 <code>git add .</code>）<br><code>git commit</code> (将暂存区文件提交至本地仓库，git commit后可加 -m进行描述，如 <code>git commit -m &quot;first commit&quot;</code>）<br><code>git remote add origin 远程仓库地址</code> （关联远程仓库，即source repo）<br><code>git pull --rebase origin master</code><br><code>git push origin master</code>（将本地仓库内容push至远程仓库）</li>
+</ul>
+<h2 id="AppVeyor关联github"><a href="#AppVeyor关联github" class="headerlink" title="AppVeyor关联github"></a>AppVeyor关联github</h2><ul>
+<li>登录<a href="https://ci.appveyor.com/login" target="_blank" rel="noopener">AppVeyor</a>，可使用github账号关联</li>
+<li>新建project，选择自己的source repo</li>
+<li>添加appveyor.yml文件至source repo根目录下，code为</li>
+</ul>
+<pre><code>clone_depth: 5
+
+environment:
+  access_token:
+    secure: xxxxxxxxxxxxxxxxxxxxxx
+install:
+  - ps: Install-Product node 6
+  - node --version
+  - npm --version
+  - npm install -g npm
+  - npm install
+  - npm install hexo-cli -g
+
+build_script:
+  - hexo generate
+
+artifacts:
+  - path: public
+
+on_success:
+  - git config --global credential.helper store
+  - ps: Add-Content &quot;$env:USERPROFILE\.git-credentials&quot; &quot;https://$($env:access_token):x-oauth-basic@github.com`n&quot;
+  - git config --global user.email &quot;%GIT_USER_EMAIL%&quot;
+  - git config --global user.name &quot;%GIT_USER_NAME%&quot;
+  - git clone --depth 5 -q --branch=%TARGET_BRANCH% %STATIC_SITE_REPO% %TEMP%\static-site
+  - cd %TEMP%\static-site
+  - del * /f /q
+  - for /d %%p IN (*) do rmdir &quot;%%p&quot; /s /q
+  - SETLOCAL EnableDelayedExpansion &amp; robocopy &quot;%APPVEYOR_BUILD_FOLDER%\public&quot; &quot;%TEMP%\static-site&quot; /e &amp; IF !ERRORLEVEL! EQU 1 (exit 0) ELSE (IF !ERRORLEVEL! EQU 3 (exit 0) ELSE (exit 1))
+  - git add -A
+  - if &quot;%APPVEYOR_REPO_BRANCH%&quot;==&quot;master&quot; if not defined APPVEYOR_PULL_REQUEST_NUMBER (git diff --quiet --exit-code --cached || git commit -m &quot;Update Static Site&quot; &amp;&amp; git push origin %TARGET_BRANCH% &amp;&amp; appveyor AddMessage &quot;Static Site Updated&quot;)
+</code></pre><p>注：<code>secure: xxxxxxxxxxx</code>处应替换为加密后的github access token。</p>
 <ul>
-<li><p>青柳雅春<br>男主，从一个小有名气的快递员到莫名其妙被卷进谋杀首相的案件，几乎一直都处于逃亡状态，虽然并不知道为什么会被指控，但他唯一清楚地知道的事情就是“逃”，不论是好友森田森吾还是父亲都这样告诉他“逃吧，赶紧逃”。但他也仅仅是一个普通人，面对突如其来的灭顶之灾，他有过悲伤、愤怒、无助，强迫自己冷静下来寻求出路。作者并没有被把他塑造成一个高智商自救的自我反抗人物，他只是同我们一样的一般人。普通人的心理活动和起伏他都真实地表现出来了。所以我在看的时候，曾想，假设我们经历这样的事情，也并不一定有他做的好。亡命天涯，疲于奔命之时，最惧怕的恐怕不是饥饿和追杀，而是一直以来支撑自己的紧绷的最后一道防线突然崩塌。会累，会想放弃，会接受现实，不再无谓地挣扎。当青柳雅春坐进警察的车里，当他试图打开车门冲下去的最后一丝希望也破灭的时候，他大概也是这样想的吧。作者把人性中最真实的感受，在一个极端的环境下，最真实地表现出来，不得不说，很难得。</p>
+<li>关于access token生成及加密<ul>
+<li>首先生成github access token 参考<a href="https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/" target="_blank" rel="noopener">Creating a personal access token for the command line</a></li>
+<li>在<a href="https://ci.appveyor.com/tools/encrypt" target="_blank" rel="noopener">AppVeyor加密页面</a>对access token进行加密</li>
+</ul>
 </li>
-<li><p>三浦<br>文中我最喜欢的一个角色，甚至死的时候，我还落泪。刚开始是被塑造成马路杀人狂形象，并没有想到他后面会在青柳的逃亡旅程中参与那么大的一部分，可以说他是青柳在逃亡路上的“导师”和帮手？作者安排他，简直就是给青柳开buff啊，这助攻太强，出场也很拉风。三浦刚开始出场的时候，就是青柳坐在警察车里之时。当青柳放弃最后一丝希望之时，瘦小的带着帽兜的三浦开着一辆小车直接撞向了警车。当然三浦的本意并没有要救青柳，只不过他认为自己站在警方的对立面，所以对青柳更有好感？总之，很随意，他救了青柳并把他带到出租屋，让他填饱肚子。还下了药，目的是让他好好睡一觉，要逃亡，总要有充足的体力啊。三浦离开后并没有停止关注青柳，他一边帮忙寻找冒充青柳的那个替身，一边给青柳提供各种外挂信息。比如，在青柳逃亡中占据重要地位的道具“黄色小破车”。即使前女友樋口晴子有心帮助他，如果没有三浦的提示，青柳可能就会在阴差阳错中错过这一关键装备。我最心疼的部分在于三浦的结局。本是帮助青柳寻找替身，却因得到的假消息而失去了自己的生命。即便之前已被假装的替身刺伤，在他领青柳走进病房时，仍然强忍疼痛，最终倒下。我脑海里能够浮现出那个画面，悲伤的但又有种解脱的味道，然而我写不出来它的千分之一。我只觉得三浦靠在病房墙边倒下的那一瞬间，窗帘拉开的间隙和他的周围都散发着某种光亮。本希望他陪青柳一直走完接下来的逃亡之路，但也许这才是他最好的结局吧。</p>
-</li>
-<li><p>陌生人<br>文中出现的各种陌生人对青柳的帮助，莫名地让我感动。不像想象中的那般先入为主或冷漠无情，这些陌生人在精神上或物质上多少给了青柳一些慰藉。停车场偶然遇到的一帮中学生，为他打气，毫不犹豫地互换衣服；三浦给他的各种帮助；流浪汉大叔帮忙播放录音从而救出阿一；蹲守的老警察没有上报青柳的闯入；医院偶然碰面的病人帮忙其从下水管道逃走……没有这些信任或帮助，青柳可能坚持不到最后一刻。当周围充斥着各种怀疑和厌恶的情绪，还能有陌生人选择你这一边，是一件多么简单又不简单的事情。看到这些情节让我莫名地兴奋，就好像男主逃亡路上总会绝处逢生，庆幸那些从未言明的善意。</p>
-</li>
-<li><p>好朋友<br>另一个让我感叹的事情大概是青柳与那些好朋友之间的情谊。最执着的大概是前女友樋口晴子。即便是前女友，在知道事情的一瞬间，她还是立即用了自己能想到的仅存的办法去帮助重重困境中的他，尽管希望渺茫，但还是义无反顾地做了。尤其是发现青柳留在车里的纸条后，她写下的那三个简单的字“我知道”。我不知道这三个字对青柳的内心有多大的触动，但我知道那种当你被全世界误会，有多么渴望一个肯定的感受，那种不需要任何解释就站在你身边的信任。至于森田和阿一的角色，我不想多说。也许说起来太复杂。毕竟人都是要长大，就像文中说的“现在已经回不到过去了。虽然曾经有那样一条路，但不知何时大家都渐渐老去了。”每个人都踏进了不同的河流，自学生时代后，渐渐分别，远离，可能相遇可能再也不见，再见之时，已是分辨不出当初的陌生模样。大概是一条亘古不变的真理：任何关系都从高昂到冷却，中间注入的都是时间的厚度和陌生的灰尘。即使有心拂去，也害怕接受真实的丑陋，都是些日渐背离的刻痕。</p>
-</li>
-<li><p>父母<br>“直到最后一刻都要站孩子一边，这就是父母呀。”有一段写青柳雅春努力压制眼泪的描写很让人动容。看见父亲在媒体前拼命维护自己，让自己快逃的样子，他害怕号啕大哭，害怕眼泪会消耗掉自己的意志，他是一个逃亡的人啊。他只能永不停歇地逃下去。也许，世界上唯一一种无条件的爱便是父母对孩子的感情了。（不过，看了《我们时代的神经症人格》，对这一点有了些怀疑，有些父母的爱大概是对爱的一种病态需要。由于缺乏令人满意的情感关系，便把对爱的需要释放到子女身上。这种爱并不是正常的、父母与子女之间的情感内涵。当然这里扯远了，只是突然想到现在很多父母和子女之间的情感问题也很复杂，并不总像我们想象的那样无私、美好、伟大。）</p>
-</li>
-<li><p>小丑鱼和烟火<br>这两个意象是我文中比较喜欢的。小丑鱼是晴子之前玩游戏养的一条小丑鱼，它总会说一句“你呀，可不能安于现状。”很简单的一句话，却很有分量吧。甚至我也想养这么一条小丑鱼了。“安于现状”，总是自己察觉不到而在他人说出的那一刻猛然开始恐慌。很容易就会陷入到这么一种境况当中。烟火是我比较喜欢的另一个意象。当天空上方绽放花火，总有一个人跟你一样，在同一时刻的不同地点，抬头伫足，不是一种很奇妙的体验吗?我总是倾向于相信平行时空的存在，我觉得这是一种美妙的想法。千千万中的我，总有一个能满足现存的期冀，这样想着，或许能更坚定地走下去。</p>
+<li>对project environment进行设置，在setting中添加四个环境变量，分别为：<blockquote>
+<p>GIT_USER_EMAIL  （个人github账号信息）<br>GIT_USER_NAME   （个人github账号信息）<br>STATIC_SITE_REPO  (content repo的地址）<br>TARGET_BRANCH   （默认master）</p>
+</blockquote>
 </li>
 </ul>
-<p>这本书真的有太多可写的内容了，我仅仅挑了一些感触最深的东西。涉及更深层面的内容（舆论操纵，国家机器等），不过多谈论，这些问题上总是有太多分歧和争执，我也不喜欢讨论政治。只不过有些情节让我迷之想起恐怖直播。另外，我也找来了电影版，仅仅看了开头就马上关掉了，我害怕它摧毁一些文字在我脑中构建的形象。青柳是LEGAL HIGH的男主演的，对他并无好感，也不喜欢看LEGAL HIGH（不知道周围的人为什么对它评价那么高），跟我想象中的青柳太不一样了。最重要的是不想破坏我心目中的三浦。</p>
+<p>至此，AppVeyor的相关设置就完成了。此后，只要source repo有内容变化，AppVeyor便会自动生成静态信息并push到content repo，实现自动更新，是不是很方便，终于不用担心多端同步、备份问题了。</p>
+<p>references：<br><a href="https://formulahendry.github.io/2016/12/04/hexo-ci/#" target="_blank" rel="noopener">Hexo的版本控制与持续集成</a><br><a href="http://blog.csdn.net/taoyuxin1314/article/details/78949339" target="_blank" rel="noopener">Git上传项目到远程仓库</a><br><a href="http://blog.csdn.net/weixin_38015384/article/details/79005371" target="_blank" rel="noopener">通过git工具上传本地文件到github</a></p>
 
       
     </div>
@@ -399,9 +440,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/marknotes/" rel="tag"># marknotes</a>
+            <a href="/tags/tech/" rel="tag"># tech</a>
           
-            <a href="/tags/book/" rel="tag"># book</a>
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+            <a href="/tags/github/" rel="tag"># github</a>
+          
+            <a href="/tags/AppVeyor/" rel="tag"># AppVeyor</a>
           
         </div>
       
@@ -414,8 +459,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/22/金色梦乡摘录/" rel="next" title="金色梦乡摘录">
-                <i class="fa fa-chevron-left"></i> 金色梦乡摘录
+              <a href="/2018/01/17/test/" rel="next" title="test">
+                <i class="fa fa-chevron-left"></i> test
               </a>
             
           </div>
@@ -423,10 +468,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/11/我们时代的神经症人格/" rel="prev" title="我们时代的神经症人格">
-                我们时代的神经症人格 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -488,8 +529,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -584,6 +634,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#建立source-repo"><span class="nav-number">1.</span> <span class="nav-text">建立source repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将源文件上传至source-repo"><span class="nav-number">2.</span> <span class="nav-text">将源文件上传至source repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AppVeyor关联github"><span class="nav-number">3.</span> <span class="nav-text">AppVeyor关联github</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -741,9 +807,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/03/22/金色梦乡/';
-          this.page.identifier = '2017/03/22/金色梦乡/';
-          this.page.title = '金色梦乡';
+          this.page.url = 'http://yoursite.com/2018/01/20/AppVeyor持续集成/';
+          this.page.identifier = '2018/01/20/AppVeyor持续集成/';
+          this.page.title = 'AppVeyor持续集成';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://faradk.disqus.com/embed.js';
