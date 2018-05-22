@@ -1816,7 +1816,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #85ffc9;
+  background: #bb7c60;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2685,7 +2685,7 @@ img.img-topic {
 }
 blockquote.question {
   color: #234;
-  border-left: 3px solid #f9f9f9;
+  border-left: 1px solid #f9f9f9;
   background-color: #f9f9f9;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
