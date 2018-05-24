@@ -352,8 +352,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2018/01/20/AppVeyor持续集成/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/01/20/AppVeyor持续集成/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/20/AppVeyor持续集成/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -514,8 +513,7 @@ hexo＋github确实还可以，但多端同步始终是困扰大多数人的一�
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2018/01/17/test/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/01/17/test/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/01/17/test/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -676,8 +674,7 @@ hexo＋github确实还可以，但多端同步始终是困扰大多数人的一�
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/12/15/about thesis/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/12/15/about thesis/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/12/15/about thesis/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -842,8 +839,7 @@ westlaw
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/11/20/hexo+github/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/11/20/hexo+github/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/11/20/hexo+github/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1009,8 +1005,7 @@ westlaw
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/07/14/妄想说/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/07/14/妄想说/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/07/14/妄想说/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1361,14 +1356,6 @@ westlaw
 
   
 
-    
-      <script id="dsq-count-scr" src="https://hadidjam.disqus.com/count.js" async></script>
-    
-
-    
-
-  
-
 
 
 
@@ -1384,12 +1371,38 @@ westlaw
 
 
 
+  
 
 
 
 
 
 
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'bke6rVlSxKGOm3khfDG9mQjq-gzGzoHsz',
+        appKey: 'CkBiN9QF8LA6QO2LrvEJImdR',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

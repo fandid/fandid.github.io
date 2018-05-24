@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="23">
 <meta property="og:description" content="论文初步结束，整理tips。  legal research database westlaw  一手资料 case、USCA、FR、CFR 二手资料 legal review，ALR，Am Jur，CJS，encyclopedia等效力上 Restatement＞Am Jur、CJS＞ALR＞treatise＞legal review＞practice materials   HeinOnlin">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-05-24T11:39:16.715Z">
+<meta property="og:updated_time" content="2018-05-24T12:52:41.274Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="about thesis">
 <meta name="twitter:description" content="论文初步结束，整理tips。  legal research database westlaw  一手资料 case、USCA、FR、CFR 二手资料 legal review，ALR，Am Jur，CJS，encyclopedia等效力上 Restatement＞Am Jur、CJS＞ALR＞treatise＞legal review＞practice materials   HeinOnlin">
@@ -353,8 +353,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/12/15/about thesis/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/12/15/about thesis/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/12/15/about thesis/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -470,6 +469,24 @@
     
 
     
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    libby
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="http://yoursite.com/2017/12/15/about thesis/" title="about thesis">http://yoursite.com/2017/12/15/about thesis/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
       
@@ -533,14 +550,7 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
     </div>
-
   
 
 
@@ -803,26 +813,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://hadidjam.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/12/15/about thesis/';
-          this.page.identifier = '2017/12/15/about thesis/';
-          this.page.title = 'about thesis';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://hadidjam.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -838,12 +828,38 @@
 
 
 
+  
 
 
 
 
 
 
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'bke6rVlSxKGOm3khfDG9mQjq-gzGzoHsz',
+        appKey: 'CkBiN9QF8LA6QO2LrvEJImdR',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

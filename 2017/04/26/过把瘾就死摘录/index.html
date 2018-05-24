@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="23">
 <meta property="og:description" content="过把瘾就死    王朔 可以说这种关系是牢不可破和坚如磐石的，就像没有及时换药的伤口纱布和血痂粘在一起一样，任何揭开它的小心翼翼的行为都将引起撕皮裂肉的痛楚。 　　  温情脉脉的摩娑和叹息般的近乎自我遐想自我憧憬的祈使句式使人完全忽略了并不以为这是一个要挟。  一个人在餐馆里夸赞一道菜可口并不是说他想留下来当厨师。  她睡了，我心情沉重，感到责任重大。 　　 她是么？这我也不知道。  我的脚能走路">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-05-24T11:39:16.731Z">
+<meta property="og:updated_time" content="2018-05-24T12:52:41.383Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="过把瘾就死摘录">
 <meta name="twitter:description" content="过把瘾就死    王朔 可以说这种关系是牢不可破和坚如磐石的，就像没有及时换药的伤口纱布和血痂粘在一起一样，任何揭开它的小心翼翼的行为都将引起撕皮裂肉的痛楚。 　　  温情脉脉的摩娑和叹息般的近乎自我遐想自我憧憬的祈使句式使人完全忽略了并不以为这是一个要挟。  一个人在餐馆里夸赞一道菜可口并不是说他想留下来当厨师。  她睡了，我心情沉重，感到责任重大。 　　 她是么？这我也不知道。  我的脚能走路">
@@ -353,8 +353,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/04/26/过把瘾就死摘录/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/04/26/过把瘾就死摘录/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/04/26/过把瘾就死摘录/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -634,6 +633,24 @@
     
 
     
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    libby
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="http://yoursite.com/2017/04/26/过把瘾就死摘录/" title="过把瘾就死摘录">http://yoursite.com/2017/04/26/过把瘾就死摘录/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
       
@@ -695,14 +712,7 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
     </div>
-
   
 
 
@@ -990,26 +1000,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://hadidjam.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/04/26/过把瘾就死摘录/';
-          this.page.identifier = '2017/04/26/过把瘾就死摘录/';
-          this.page.title = '过把瘾就死摘录';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://hadidjam.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -1025,12 +1015,38 @@
 
 
 
+  
 
 
 
 
 
 
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'bke6rVlSxKGOm3khfDG9mQjq-gzGzoHsz',
+        appKey: 'CkBiN9QF8LA6QO2LrvEJImdR',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

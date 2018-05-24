@@ -117,7 +117,7 @@
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/005xH7pTly1ffcoynuzffj33vc2kxu0x.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/005xH7pTly1ffcoysqp1uj32vd15ck61.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/005xH7pTly1ffcoyxlbqsj31s80oj4a1.jpg">
-<meta property="og:updated_time" content="2018-05-24T11:39:16.731Z">
+<meta property="og:updated_time" content="2018-05-24T12:52:41.383Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="雍和宫&#x2F;地坛">
 <meta name="twitter:image" content="http://ww1.sinaimg.cn/large/005xH7pTly1ffcooid04ej340w2hc1ky.jpg">
@@ -374,8 +374,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/05/11/雍和宫/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/11/雍和宫/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/05/11/雍和宫/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -420,6 +419,24 @@
 
     
 
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    libby
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="http://yoursite.com/2017/05/11/雍和宫/" title="雍和宫/地坛">http://yoursite.com/2017/05/11/雍和宫/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
     
 
     <footer class="post-footer">
@@ -482,14 +499,7 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
     </div>
-
   
 
 
@@ -752,26 +762,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://hadidjam.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/05/11/雍和宫/';
-          this.page.identifier = '2017/05/11/雍和宫/';
-          this.page.title = '雍和宫/地坛';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://hadidjam.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -787,12 +777,38 @@
 
 
 
+  
 
 
 
 
 
 
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'bke6rVlSxKGOm3khfDG9mQjq-gzGzoHsz',
+        appKey: 'CkBiN9QF8LA6QO2LrvEJImdR',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

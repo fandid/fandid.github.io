@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="23">
 <meta property="og:description" content="这应该是假期我做的最成功的一件事了，不经意间原来我也能读完两万页字。经历过更艰难的，你才会发现艰难的事情其实忍忍就过去了。刚开始读时，故事并没有多吸引我。直到唐泰斯被投放到地牢并与神甫开始策划逃出时，我感觉到有点意思了，文学版的越狱。但实际上越狱的情节并没有很长，我还纳闷如此精彩的情节应该用更多的笔墨来描写啊。看到最后，才明白这样的安排是有道理的，因为越狱仅仅是唐泰斯心中酝酿的伟大复仇计划的开始，">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-05-24T11:39:16.715Z">
+<meta property="og:updated_time" content="2018-05-24T12:52:41.337Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基督山伯爵">
 <meta name="twitter:description" content="这应该是假期我做的最成功的一件事了，不经意间原来我也能读完两万页字。经历过更艰难的，你才会发现艰难的事情其实忍忍就过去了。刚开始读时，故事并没有多吸引我。直到唐泰斯被投放到地牢并与神甫开始策划逃出时，我感觉到有点意思了，文学版的越狱。但实际上越狱的情节并没有很长，我还纳闷如此精彩的情节应该用更多的笔墨来描写啊。看到最后，才明白这样的安排是有道理的，因为越狱仅仅是唐泰斯心中酝酿的伟大复仇计划的开始，">
@@ -353,8 +353,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/02/11/基督山伯爵/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/02/11/基督山伯爵/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/02/11/基督山伯爵/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -397,6 +396,24 @@
     
 
     
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    libby
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="http://yoursite.com/2017/02/11/基督山伯爵/" title="基督山伯爵">http://yoursite.com/2017/02/11/基督山伯爵/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
       
@@ -417,8 +434,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/11/基督山伯爵摘录/" rel="prev" title="基督山伯爵摘录">
-                <i class="fa fa-chevron-left"></i> 基督山伯爵摘录
+              <a href="/2017/02/11/罗生门/" rel="prev" title="罗生门">
+                <i class="fa fa-chevron-left"></i> 罗生门
               </a>
             
           </div>
@@ -427,8 +444,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/01/31/collection/" rel="next" title="collection">
-                collection <i class="fa fa-chevron-right"></i>
+              <a href="/2017/02/11/基督山伯爵摘录/" rel="next" title="基督山伯爵摘录">
+                基督山伯爵摘录 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -460,14 +477,7 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
     </div>
-
   
 
 
@@ -730,26 +740,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://hadidjam.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/02/11/基督山伯爵/';
-          this.page.identifier = '2017/02/11/基督山伯爵/';
-          this.page.title = '基督山伯爵';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://hadidjam.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -765,12 +755,38 @@
 
 
 
+  
 
 
 
 
 
 
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'bke6rVlSxKGOm3khfDG9mQjq-gzGzoHsz',
+        appKey: 'CkBiN9QF8LA6QO2LrvEJImdR',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

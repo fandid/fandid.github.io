@@ -229,7 +229,7 @@
 <meta property="og:image" content="http://ozcxwjepj.bkt.clouddn.com/18-5-22/77286872.jpg">
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/e724cbefgw1etyppy7bgwg2001001017.gif">
 <meta property="og:image" content="http://yoursite.com/favourite/undefined">
-<meta property="og:updated_time" content="2018-05-24T11:39:16.746Z">
+<meta property="og:updated_time" content="2018-05-24T12:52:41.399Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="23">
 <meta name="twitter:description" content="📖 BOOKS  ​.hexo-image-stream-lazy {display:block;}.hexo-img-readStream{width:100%;max-width:1100px;margin:3% auto}div.hexo-img-readStream readItems{ background: #fefefe;box-shadow: 0 1px 2px rgba(34,">
@@ -513,14 +513,7 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
     </div>
-
   
 
 
@@ -783,26 +776,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://hadidjam.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/favourite/index.html';
-          this.page.identifier = 'favourite/index.html';
-          this.page.title = '';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://hadidjam.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -818,12 +791,38 @@
 
 
 
+  
 
 
 
 
 
 
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'bke6rVlSxKGOm3khfDG9mQjq-gzGzoHsz',
+        appKey: 'CkBiN9QF8LA6QO2LrvEJImdR',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

@@ -352,8 +352,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/05/11/雍和宫/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/11/雍和宫/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/05/11/雍和宫/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -520,8 +519,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/04/26/过把瘾就死/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/04/26/过把瘾就死/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/04/26/过把瘾就死/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -681,8 +679,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/04/26/天道/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/04/26/天道/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/04/26/天道/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -845,8 +842,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/04/11/我们时代的神经症人格/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/04/11/我们时代的神经症人格/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/04/11/我们时代的神经症人格/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1007,8 +1003,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/03/22/金色梦乡/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/03/22/金色梦乡/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/03/22/金色梦乡/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1171,8 +1166,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/03/16/玉渊潭/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/03/16/玉渊潭/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/03/16/玉渊潭/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1337,8 +1331,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/03/13/漫长的告别/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/03/13/漫长的告别/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/03/13/漫长的告别/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1685,14 +1678,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://hadidjam.disqus.com/count.js" async></script>
-    
-
-    
-
-  
-
 
 
 
@@ -1708,12 +1693,38 @@
 
 
 
+  
 
 
 
 
 
 
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'bke6rVlSxKGOm3khfDG9mQjq-gzGzoHsz',
+        appKey: 'CkBiN9QF8LA6QO2LrvEJImdR',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

@@ -411,9 +411,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2017/02/11/基督山伯爵摘录/" itemprop="url">
+            <a class="post-title-link" href="/2017/02/11/基督山伯爵/" itemprop="url">
               
-                <span itemprop="name">基督山伯爵摘录</span>
+                <span itemprop="name">基督山伯爵</span>
               
             </a>
         
@@ -448,9 +448,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2017/02/11/基督山伯爵/" itemprop="url">
+            <a class="post-title-link" href="/2017/02/11/基督山伯爵摘录/" itemprop="url">
               
-                <span itemprop="name">基督山伯爵</span>
+                <span itemprop="name">基督山伯爵摘录</span>
               
             </a>
         
@@ -819,14 +819,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://hadidjam.disqus.com/count.js" async></script>
-    
-
-    
-
-  
-
 
 
 
@@ -842,12 +834,38 @@
 
 
 
+  
 
 
 
 
 
 
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'bke6rVlSxKGOm3khfDG9mQjq-gzGzoHsz',
+        appKey: 'CkBiN9QF8LA6QO2LrvEJImdR',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
