@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hadidjam.github.io/"/>
-  <updated>2019-04-17T16:10:43.073Z</updated>
+  <updated>2019-04-17T16:12:26.005Z</updated>
   <id>https://hadidjam.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://hadidjam.github.io/2018/11/15/%E4%BB%8A%E5%A4%A9%E7%9A%84%E5%A4%9C%E7%9C%9F%E7%9A%84%E5%BE%88%E9%95%BF%E5%90%A7/"/>
     <id>https://hadidjam.github.io/2018/11/15/今天的夜真的很长吧/</id>
     <published>2018-11-15T22:36:29.000Z</published>
-    <updated>2019-04-17T16:10:43.073Z</updated>
+    <updated>2019-04-17T16:12:26.005Z</updated>
     
     <content type="html"><![CDATA[<p>有一个坏毛病<br>晾一杯水 总是快凉透了的时候才想起来喝<br>还没到老的时候<br>已经嫌弃负重的身外之物太多<br>什么时候能够简简单单地度过一小时就好了</p><p>不想反反复复<br>但另一面就是自欺欺人<br>翻来覆去  于是自己都开始烦了</p><p>这样的沉默大多时候都是一种茫然的回应<br>自己都没有搞清楚的时候<br>自然再没有多余的力气</p>]]></content>
     
@@ -48,7 +48,7 @@
     <link href="https://hadidjam.github.io/2018/11/15/%E7%B4%AF%E4%BA%86/"/>
     <id>https://hadidjam.github.io/2018/11/15/累了/</id>
     <published>2018-11-15T21:23:11.000Z</published>
-    <updated>2019-04-17T16:10:43.088Z</updated>
+    <updated>2019-04-17T16:12:26.005Z</updated>
     
     <content type="html"><![CDATA[<p>不知道还能坚持多久<br>真的不知道。<br>脸上最多的表情就是面无表情，<br>一句话也不想说。<br>不是故意要这样，<br>就这样发生了<br>也没有想着改变<br>更多的是力不从心。</p><p>没有什么可以抱怨，<br>都是在一个人走路，走成什么样并没有人在意<br>只是千万不要回头看了<br>都是一团哭泣的黑雾</p>]]></content>
     
@@ -74,7 +74,7 @@
     <link href="https://hadidjam.github.io/2018/06/26/%E6%9A%82%E5%88%AB/"/>
     <id>https://hadidjam.github.io/2018/06/26/暂别/</id>
     <published>2018-06-26T22:36:51.000Z</published>
-    <updated>2019-04-17T16:10:43.088Z</updated>
+    <updated>2019-04-17T16:12:26.005Z</updated>
     
     <content type="html"><![CDATA[<p>暂别。<br>人间真的是不值得，多停留的每一秒不过是再一次验证。</p>]]></content>
     
@@ -100,7 +100,7 @@
     <link href="https://hadidjam.github.io/2018/01/20/AppVeyor%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/"/>
     <id>https://hadidjam.github.io/2018/01/20/AppVeyor持续集成/</id>
     <published>2018-01-20T17:59:47.000Z</published>
-    <updated>2019-04-17T16:10:43.073Z</updated>
+    <updated>2019-04-17T16:12:26.005Z</updated>
     
     <content type="html"><![CDATA[<p>前面介绍过如何用hexo＋github生成静态page，今天小小总结一下如何用Appveyor持续集成，解决hexo多端同步的问题。</p><p>hexo＋github确实还可以，但多端同步始终是困扰大多数人的一个问题。hexo的一切活动都依赖于本地构建的git和node.js环境，之后再将hexo生成的静态page托管到github上。如果出现换电脑、重装系统等情况，只能重新搭建环境，这样未免有些麻烦。受此文章<a href="https://formulahendry.github.io/2016/12/04/hexo-ci/#" target="_blank" rel="noopener">Hexo的版本控制与持续集成</a>启发，终于找到了合适的同步方法，主要是利用AppVeyor进行持续集成。</p><h2 id="建立source-repo"><a href="#建立source-repo" class="headerlink" title="建立source repo"></a>建立source repo</h2><ul><li>在github上新建repo作为source repo，source repo用来存放hexo源文件，当hexo源文件发生改变，AppVeyor将自动生成静态页面并push到content repo，即github上我们托管的静态页面，这样一来既对hexo源文件进行了备份，又避免了手动deploy的繁琐。</li></ul><h2 id="将源文件上传至source-repo"><a href="#将源文件上传至source-repo" class="headerlink" title="将源文件上传至source repo"></a>将源文件上传至source repo</h2><ul><li>在本地hexo文件夹下通过git bash依次执行命令<br><code>git init</code>  （初始化仓库）<br><code>git add .</code> （将上传文件添加到暂存区，添加单个文件用 <code>git add test.txt</code>；添加所有文件则用 <code>git add .</code>）<br><code>git commit</code> (将暂存区文件提交至本地仓库，git commit后可加 -m进行描述，如 <code>git commit -m &quot;first commit&quot;</code>）<br><code>git remote add origin 远程仓库地址</code> （关联远程仓库，即source repo）<br><code>git pull --rebase origin master</code><br><code>git push origin master</code>（将本地仓库内容push至远程仓库）</li></ul><h2 id="AppVeyor关联github"><a href="#AppVeyor关联github" class="headerlink" title="AppVeyor关联github"></a>AppVeyor关联github</h2><ul><li>登录<a href="https://ci.appveyor.com/login" target="_blank" rel="noopener">AppVeyor</a>，可使用github账号关联</li><li>新建project，选择自己的source repo</li><li>添加appveyor.yml文件至source repo根目录下，code为</li></ul><pre><code>clone_depth: 5environment:  access_token:    secure: xxxxxxxxxxxxxxxxxxxxxxinstall:  - ps: Install-Product node 6  - node --version  - npm --version  - npm install -g npm  - npm install  - npm install hexo-cli -gbuild_script:  - hexo generateartifacts:  - path: publicon_success:  - git config --global credential.helper store  - ps: Add-Content &quot;$env:USERPROFILE\.git-credentials&quot; &quot;https://$($env:access_token):x-oauth-basic@github.com`n&quot;  - git config --global user.email &quot;%GIT_USER_EMAIL%&quot;  - git config --global user.name &quot;%GIT_USER_NAME%&quot;  - git clone --depth 5 -q --branch=%TARGET_BRANCH% %STATIC_SITE_REPO% %TEMP%\static-site  - cd %TEMP%\static-site  - del * /f /q  - for /d %%p IN (*) do rmdir &quot;%%p&quot; /s /q  - SETLOCAL EnableDelayedExpansion &amp; robocopy &quot;%APPVEYOR_BUILD_FOLDER%\public&quot; &quot;%TEMP%\static-site&quot; /e &amp; IF !ERRORLEVEL! EQU 1 (exit 0) ELSE (IF !ERRORLEVEL! EQU 3 (exit 0) ELSE (exit 1))  - git add -A  - if &quot;%APPVEYOR_REPO_BRANCH%&quot;==&quot;master&quot; if not defined APPVEYOR_PULL_REQUEST_NUMBER (git diff --quiet --exit-code --cached || git commit -m &quot;Update Static Site&quot; &amp;&amp; git push origin %TARGET_BRANCH% &amp;&amp; appveyor AddMessage &quot;Static Site Updated&quot;) </code></pre><p>注：<code>secure: xxxxxxxxxxx</code>处应替换为加密后的github access token。</p><ul><li>关于access token生成及加密<ul><li>首先生成github access token 参考<a href="https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/" target="_blank" rel="noopener">Creating a personal access token for the command line</a></li><li>在<a href="https://ci.appveyor.com/tools/encrypt" target="_blank" rel="noopener">AppVeyor加密页面</a>对access token进行加密</li></ul></li><li>对project environment进行设置，在setting中添加四个环境变量，分别为：<blockquote><p>GIT_USER_EMAIL  （个人github账号信息）<br>GIT_USER_NAME   （个人github账号信息）<br>STATIC_SITE_REPO  (content repo的地址）<br>TARGET_BRANCH   （默认master）</p></blockquote></li></ul><p>至此，AppVeyor的相关设置就完成了。此后，只要source repo有内容变化，AppVeyor便会自动生成静态信息并push到content repo，实现自动更新，是不是很方便，终于不用担心多端同步、备份问题了。</p><p>references：<br><a href="https://formulahendry.github.io/2016/12/04/hexo-ci/#" target="_blank" rel="noopener">Hexo的版本控制与持续集成</a><br><a href="http://blog.csdn.net/taoyuxin1314/article/details/78949339" target="_blank" rel="noopener">Git上传项目到远程仓库</a><br><a href="http://blog.csdn.net/weixin_38015384/article/details/79005371" target="_blank" rel="noopener">通过git工具上传本地文件到github</a></p>]]></content>
     
@@ -132,7 +132,7 @@
     <link href="https://hadidjam.github.io/2018/01/17/test/"/>
     <id>https://hadidjam.github.io/2018/01/17/test/</id>
     <published>2018-01-17T20:18:01.000Z</published>
-    <updated>2019-04-17T16:10:43.073Z</updated>
+    <updated>2019-04-17T16:12:26.005Z</updated>
     
     <content type="html"><![CDATA[<p>test</p>]]></content>
     
@@ -162,7 +162,7 @@
     <link href="https://hadidjam.github.io/2017/12/15/about%20thesis/"/>
     <id>https://hadidjam.github.io/2017/12/15/about thesis/</id>
     <published>2017-12-15T21:28:36.000Z</published>
-    <updated>2019-04-17T16:10:43.073Z</updated>
+    <updated>2019-04-17T16:12:26.005Z</updated>
     
     <content type="html"><![CDATA[<p>论文初步结束，整理tips。</p><ul><li>legal research database<ul><li>westlaw <ul><li>一手资料 case、USCA、FR、CFR</li><li>二手资料 legal review，ALR，Am Jur，CJS，encyclopedia等</li></ul></li><li>HeinOnline 查期刊比较方便</li><li>Google scholar</li><li>根据内容的需要查找相关官方网站</li><li>个人最常用的是westlaw，HeinOnline和Google scholar，且结合使用非常方便。</li></ul></li><li>annotation<ul><li>写作时最好直接插入注释的规范形式，后期修改时可以节省不少时间。注释相同时，可先插入完整的，最后修改为 Id./Id. at 32-33./xxx,supra note 3, at 45-46. ,避免因内容调整而出现注释错位、丢失。</li><li>大部分期刊HeinOnline都有收录，可直接搜索并cite bulebook格式</li><li><a href="http://www.citethisforme.com/zh" target="_blank" rel="noopener">cite this for me</a>一些比较难查找的文献可从此网站搜索并直接生成引用格式</li><li><a href="https://www.bookfinder.com/?ref=bf_s3_hd_1" target="_blank" rel="noopener">bookfinder</a>、<a href="https://www.abebooks.com/" target="_blank" rel="noopener">abebook</a>用来查找外文书籍的ISBN等信息</li></ul></li><li>archive<ul><li>可使用noteexpress、endnote进行文献管理，利用星标、关键字、标签等分类、归档文献，便于查找</li><li>当然比较简单暴力的便是直接在文件夹中进行分类，建议按照不同的topic对中英文献分别命名文件夹，按最新时间排序</li></ul></li><li>highlight<ul><li>本地可结合onenote</li><li>网页建议pocket 配合diigo</li></ul></li><li>reading<ul><li>大量看case的确能提高英文阅读能力，阅读时一定要从标题或outline中快速定位重点 其他可略读。</li><li>逐渐习惯online reading</li></ul></li><li>version<ul><li>每一次阶段性的修改都要及时保存，避免重复工作</li><li>再一次推荐github、coding 版本控制非常方便</li></ul></li></ul><hr><p>转眼到了三月底，毕业的季节，熬夜肝论文的季节。每天靠黑咖和某云音乐史诗级bgm歌单续命。说一下最后定稿中一些不得不注意的小细节。<br>1.备份<br>做好备份！做好备份！做好备份！！！改论文先另存为或者用coding github，把每一次改动的版本都保留下来。在最后定稿之前，会经历多次结构的调整，有可能会用到之前写的内容。<br>2.有关目录</p><ul><li>内容<br>目录应该是最为重要的部分，短短几分钟，老师就能从目录中找出好多问题，一定要仔细揣摩用语以及结构间的关系。</li><li>形式<br>自动生成目录 按照学校论文格式调整 注意页码字体<code>Times New Roman</code> 注意对齐<br>结构一旦调整 改目录 改对应正文的标题 改页眉-注意正文文本的层级、段前段后的间距</li></ul><p>3.有关正文<br>摘要≠引言≠结论<br>正文中所有的数字、英文字体为<code>Times New Roman</code><br>多看外文文献 很多东西自己翻译可以有效降低重复率</p><p>4.有关页眉页脚页码<br>页眉注意分节<br>一般打印店调格式50大洋 不差钱的不用浪费这时间了  不然光一个页眉就调到崩溃<br>当然想要自己来的 google值得你拥有</p><p>5.参考文献和脚注</p><ul><li>最最重要</li><li>看要求 连续编号或分页编号</li><li>中文 <ul><li>著作类<br><code>xxx：《xxxxxx》，XX出版社XX年版，第XX页。</code>（参考文献中可省略页）</li><li>期刊类<br><code>XXX：“XXXXXX”，载《XXXX》XXX年第X期，第XXX页。</code>（参考文献中可省略页）</li></ul></li><li>外文<ul><li>case<br><code>Vandermark v. Ford Motor Co., 391 P.2d 168 (Cal. 1964).</code>  </li><li>reviews n journals<br><code>David G. Owen, *Punitive Damages in Products Liability Litigation*, 74 Mich.L.Rev. 1258, 1260 (1976).</code></li></ul></li><li>注意对齐 所有标点均应是英文标点，尤其逗号</li><li>相同文献引用<ul><li>位置连续且页码完全相同<br><code>Id.</code></li><li>位置连续页码不同<br><code>Id. at XXX.</code></li></ul></li><li>文章结构调整后 要检查脚注是否错位，有可能原先写成Id.但调整后出现到下一页第一个，所以建议刚开始把所有的脚注都写完整，最后定稿再按顺序看哪些需要简写。</li></ul><p>6.最后检查<br><code>Ctrl＋F</code> 查找是否有多余空格 是否中英文标点（逗号）打错。不求内容多高大上，最起码在形式上做到完美。</p><p>7.关于心态<br>修改过程中不止一次会心态爆炸 尤其是结构调整  刚改完又让改回去？excuse me？喵喵喵？但除了好好改，熬夜改，改了又改，别无他法，多和导师沟通。</p><hr><p>以上</p>]]></content>
     
@@ -194,7 +194,7 @@
     <link href="https://hadidjam.github.io/2017/11/20/hexo+github/"/>
     <id>https://hadidjam.github.io/2017/11/20/hexo+github/</id>
     <published>2017-11-20T18:28:36.000Z</published>
-    <updated>2019-04-17T16:10:43.073Z</updated>
+    <updated>2019-04-17T16:12:26.005Z</updated>
     
     <content type="html"><![CDATA[<p>前几天一直在折腾静态博客，相比wordpress之类臃肿的动态博客来说，static website越来越成为个人博客、轻量级博客的首选。在接触hexo和github之前，一直用的是<code>dropbox+droppages</code>的形式搭建静态页面。这种形式足够简洁，本地生成markdown后直接在文件夹内更新，省去在线编辑和修改的限制。droppages本身提供了几个theme，可修改css等文件，当然排版方面非常简陋，如果只是专注于写作、文字，droppages足够了，重点是真的很方便。（与后面hexo一比就能感受到）</p><p>下面来说说hexo和github的搭建过程，也算做个记录。某些方面droppages用起来还是有些限制，所以想着寻找合适的替代。首选还是希望有dropbox+something的组合，可惜除了droppages，没有找到什么合适的。寻找期间，尝试了evernote+postach.io的形式，也还不错，不过始终觉得别扭，也许对evernote没啥好感？然后尝试了farbox的最新产品bitcron，据说很多人都从其他平台迁移至bitcron，我试用了一下还行，就是价格感觉不太适合轻量级用户，对我这种经常折腾的人来说也不太实用，放弃。<br>没办法，只能自己动手搭一个了，在jekyll，hexo，hugo，octopress，ghost等众多框架中，我选了hexo，一来相对难度小一点，小白多钻研一下也可以弄明白；二来hexo基于node.js环境，对于Windows友好一点，而jekyll基于ruby，在windows上配置起来要繁琐一些。更重要的是hexo好看啊，充分展现了simple is beautiful</p><p>虽说hexo简单一些，但搭起来也处处是坑，第一遍啥也不懂结果费了半天劲404了，第二遍大概用了二十分钟就搭好了。前期准备工作做好之后搭起来就特别快，找一个好的教程也很重要，很多小问题基本google都能解决。</p><h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><ul><li>安装node.js和git<br>这是hexo搭建的基础，首先要安装node.js和git。按照<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">hexo官网</a>文档中的流程一步一步来，基本没什么问题。</li></ul><h2 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h2><ul><li>安装hexo<br>利用npm安装hexo 具体命令为<br><code>$ npm install -g hexo-cli</code> </li><li><p>建立站点<br>有过droppages的使用经验就很容易理解这一步要干嘛了。简单来说，一个文件夹就是一个website，就是一个blog，里面放了你网站的所有内容。这个文件夹可以自定义位置和名称。你可以放到任何一个你想要的盘里，命名为hexo或其他任何名称，打开此文件夹，shift+鼠标右键会出现<code>在此处打开命令窗口</code>的字样，点击会出现控制台，执行命令<br><code>$ hexo init &lt;folder&gt;</code><br><code>$ cd &lt;folder&gt;</code><br><code>$ npm install</code><br>folder为你自定义的文件夹名称 例如 <code>$ hexo init dd</code><br>如果你没有事先建立文件夹，直接执行命令，hexo会按照你自定义的名称自动创建文件夹，一般是在C/user/administrator目录下。<br>这一步完成后可以看到文件夹里已生成基本的配置文件。</p></li><li><p>自定义配置及主题更换<br>打开根目录，找到<code>_config.yml</code> 这是站点的主配置文件，可以自定义网站title，author name等<br>主题设置默认为landscape，hexo提供了很多好看简洁的theme，可根据要求自己选择<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo theme</a> 在众多theme里我选了NexT这款主题，也是公认为hexo中最漂亮最简洁的一个主题 附上地址<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT</a>里边有关于主题各部分的配置内容，可参阅。以NexT为例，下载好主题，然后解压至根目录的themes文件夹，将解压后的文件重命名为next，然后在站点配置文件<code>_config.yml</code>中将<code>theme： landscape</code> 修改为<code>theme： next</code> 即可成功切换。打开themes中next文件夹，里边也有个<code>_config.yml</code>，这个是主题配置文件，可自定义修改主题。NexT主题本身有四个方案，在<code>_config.yml</code>里找到# Schemes可以看到有Muse，Mist，Pisces，Gemini四个方案，依个人喜好选择，启用哪个将#删除即可</p></li><li><p>本地预览<br>第一次搭建时可先本地预览下初步成果，熟练后可将所有自定义配置完一并预览然后部署，顺序不重要，依个人习惯。本地预览时主要用到以下三个命令<br><code>$ hexo clean</code>清除缓存文件（这步也可省略，我的习惯是生成前都clean一下，当你发现修改某些东西后站点未发生变化或未生效，可执行clean）<br><code>$ hexo generate</code> 生成静态文件 可简写成hexo g<br><code>$ hexo server</code> 本地预览 默认地址为<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a><br>启用本地预览可以看到站点的一些变化，我的建议是不要急着deploy，先在本地预览，一切都没问题后再进行部署。</p></li><li><p>主题的具体设置<br>本地预览后你可能会发现网站还是非常简陋，想要内容更加丰富，可在主题配置文件里进行一些修改。（主要包括新建page，自定义tag和category，自定义social，增加rss，disqus插件，首页隐藏文章等）</p><ul><li>新建page<br>打开主题配置文件 可以看到menu的设置中有home，about，categories，tags，archives等文本，可自行选择启用或不启用。值得注意的是，启用主题配置文件中about，tags等文本并不代表可以直接在站点上显示，还需在根目录source文件夹创建相应的page才可。以tags为例，应用命令<code>$ hexo new page tags</code>，可以看到source文件夹中多了tags文件，打开，新增<code>type: &quot;tags&quot;</code> 这下可以正常显示tags页面了，其他about页面同理。</li><li>修改post默认模板<br>生成新文章时，使用<code>$ hexo new &quot;xxx&quot;</code>命令<br>想要新建文章时默认添加tags，categories等文本，需要打开根目录scaffolds文件夹中的post文件，增加<code>tags:</code> 、<code>categories:</code> 字段即可，下次新建文章时不用再手动添加这两项，节省时间。</li><li>自定义social<br>next主题提供了许多social的默认项，打开主题配置文件，在social项中可自定义想要展示的social链接，有github，facebook，instagram，email等多个链接，还可以自定义 social icon，附上<a href="http://fontawesome.io/3.2.1/" target="_blank" rel="noopener">fontawesome</a>的链接，可以替换自己喜欢的图标。</li><li><p>添加rss<br>hexo提供了rss的生成插件 <code>hexo-generator-feed</code> 可参阅<a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">官方教程</a><br>首先执行命令<code>$ npm install hexo-generator-feed --save</code> 然后可在站点配置文件里Plugins行下添加字段 注意缩进</p><blockquote><p>feed:<br>type: atom<br>path: atom.xml<br>limit: 20</p></blockquote><p>然后在主题配置文件<code>rss:</code>后添加<code>&quot;/atom.xml&quot;</code> rss即可添加成功</p></li><li>添加disqus评论插件<br>首先要有<a href="https://disqus.com/" target="_blank" rel="noopener">disqus</a>账号，在setting中点击<code>add disqus to site</code> 设置shortname（可简短一些，便于设置），添加你网站的url，然后在主题配置文件disqus项中填写你的shortname 以及将 <code>enable:false</code>改为<code>enable:true</code> 成功开启评论插件</li><li>控制首页文章显示字数<br>如果文章很长的话，在首页显示全部字数不是很美观。想设置<code>read more</code>可在主题配置文件中将<code>auto_excerpt:</code>设置为<code>enable:true</code> 即可开启<code>read more</code></li><li>隐藏首页特定文章<br>受此文章启发-<a href="http://forwardkth.github.io/2016/05/08/next-theme-post-visibility/" target="_blank" rel="noopener">关于Hexo next主题如何在首页隐藏指定的文章</a> 详情参阅。</li></ul><p>至此，自定义主题的配置项已基本涵盖，其他需要请自行查阅<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo</a>和<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">next</a>相关说明</p></li></ul><h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>  本地阅览完，接下来要deploy到github pages 说白了hexo就是本地生成静态文件，然后再push到github  </p><ul><li><p>github准备<br>先准备好github pages一些基本配置，到后面deploy可以节省一些时间。首先你要有个github账号（github真的是一个利器，即使不是程序猿，了解它版本控制的核心思想也是非常有用的） ，然后新建repository，为便于部署，推荐repository name设置为 username.github.io</p></li><li><p>deploy<br>参阅hexo文档<a href="https://hexo.io/zh-cn/docs/deployment.html" target="_blank" rel="noopener">部署</a><br>首先要在站点配置文件<code>deploy:</code>下修改<code>type:</code>为<code>type: git</code><br>执行命令<code>$ npm install hexo-deployer-git --save</code>安装hexo-deployer-git 然后在站点配置文件<code>type: git</code>下增加字段</p><blockquote><p> repo: （你的repository地址，可在github查看，默认形式为<a href="https://github.com/username/username.github.io.git）" target="_blank" rel="noopener">https://github.com/username/username.github.io.git）</a><br>  branch: master （默认分支为master）<br>  message: <code>&quot;&amp;#123;&amp;#123; now&amp;#40;&#39;YYYY-MM-DD HH:mm:ss&#39;&amp;#41; &amp;#125;&amp;#125; &quot;</code></p></blockquote><p>配置好后即可部署<br>deploy命令为<code>$ hexo deploy</code> 可简写为hexo d</p><p>至此整个静态网站就搭好了，输入github pages即可查看</p></li></ul><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul><li><p>hexo优缺点<br>优点当然是简洁简洁简洁好看好看好看<br>缺点（与droppages体验相比）</p><ul><li>发布文章虽然已经很简单了，但相比直接markdown丢到dropbox的方式仍然要多了几条命令</li><li>不能手机编辑</li><li>每次稍微改动一下就得重新generate deploy 不如dropbox方便</li><li>换电脑后需要重新配置环境，不方便多端同步</li></ul></li><li><p>关于github和coding<br>github很多优秀的程序员都在用，如果觉得不太习惯可以用国内<a href="https://coding.net/" target="_blank" rel="noopener">coding</a>代替 相比github来说，coding的响应速度绝对没的说，另外github的私有库是要收费的，而coding可拥有两个免费的私有库。coding也提供静态pages和动态pages的服务，可结合hexo+github的方法将hexo部署到coding静态pages，动态pages可部署wordpress，目前官方正在公测动态pages，之后可能采取收费模式。不论是github还是coding，我想说的是这种版本控制的idea实在值得我们每个人学习，对于学生党来说，不失为写论文的利器。</p></li><li><p>关于error<br>出现error不用着急 可先结合error info查找问题 注意中英文转换、空格、缩进等问题，其他问题大部分可google解决 （还是之前说的，拿不准可先localhost预览，没问题再deploy以减少错误发生）</p></li><li><p>关于图床<br>可用七牛云</p></li></ul>]]></content>
     
@@ -219,37 +219,11 @@
   </entry>
   
   <entry>
-    <title>浮出海面摘录</title>
-    <link href="https://hadidjam.github.io/2017/07/15/%E6%B5%AE%E5%87%BA%E6%B5%B7%E9%9D%A2%E6%91%98%E5%BD%95/"/>
-    <id>https://hadidjam.github.io/2017/07/15/浮出海面摘录/</id>
-    <published>2017-07-15T17:35:03.000Z</published>
-    <updated>2019-04-17T16:10:43.585Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="浮出海面-王朔"><a href="#浮出海面-王朔" class="headerlink" title="浮出海面    王朔"></a>浮出海面    王朔</h2><p> 车到站我又突然觉得什么人都不想见了</p><p> 我在原地呆了半晌，走开：“妈的，现在人人都有莫名其妙的优越感。”</p><p> 又游了很长时间后，我绝望地精疲力尽了。沙滩仍是那么遥远，穿着点点彩色泳装的肉色人群无声无息地活动着，像是另一个快乐尘世的人们，蓝汪汪的海水无情地隔开了我，万籁俱寂，我沉了下去。我觉得自己变成一条鱼，在蓝蒙蒙的水里恣意潜游。</p><p> 回家的路上，我觉得自己既不幸又坚强，甚至很有点被自己感动。可很快，又嘲笑起自己的不屈。</p><p> 吃着吃着我产生了恍恍的先视感，好像从前有过这么一天，也是这样坐在桌前，安详地吃饭，没有外人。</p><p> “当时，我并不知道将来要干什么。现在我也不知道要干什么，但我始终觉得该干点什么。我要探索生活的意义，我很难受……”我有点语无伦次了。</p><p> 我也曾追求过真情，可总和肉体遭遇。</p><p> 辉煌时烂漫夺目，混沌时一切皆空，幻显无穷，盛时即衰</p><p> 其实并无龙门，人只不过给自己制造幻境，一时一地称雄，自以为与众不同。</p><p> 我突然觉得无聊，说这种话，做这种姿态十分无聊。</p><p> 一瞬间，我对他那种似笑非笑、满不在乎、过去曾把我深深迷住的劲头十分反感，只是一瞬间。我没再说话，他也不再说话。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;浮出海面-王朔&quot;&gt;&lt;a href=&quot;#浮出海面-王朔&quot; class=&quot;headerlink&quot; title=&quot;浮出海面    王朔&quot;&gt;&lt;/a&gt;浮出海面    王朔&lt;/h2&gt;&lt;p&gt; 车到站我又突然觉得什么人都不想见了&lt;/p&gt;
-&lt;p&gt; 我在原地呆了半晌，走开：“妈的，现
-      
-    
-    </summary>
-    
-      <category term="excerpts" scheme="https://hadidjam.github.io/categories/excerpts/"/>
-    
-    
-      <category term="excerpts" scheme="https://hadidjam.github.io/tags/excerpts/"/>
-    
-  </entry>
-  
-  <entry>
     <title>妄想说</title>
     <link href="https://hadidjam.github.io/2017/07/14/%E5%A6%84%E6%83%B3%E8%AF%B4/"/>
     <id>https://hadidjam.github.io/2017/07/14/妄想说/</id>
     <published>2017-07-14T16:12:13.000Z</published>
-    <updated>2019-04-17T16:10:43.088Z</updated>
+    <updated>2019-04-17T16:12:26.005Z</updated>
     
     <content type="html"><![CDATA[<hr><a id="more"></a><h2 id="妄想说-十月婴孩"><a href="#妄想说-十月婴孩" class="headerlink" title="妄想说___十月婴孩"></a>妄想说___十月婴孩</h2><embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=9191684&page=1" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"><p>推上已经分享过一次，没有音源，只能循环cut，顺便空耳了歌词。</p><blockquote><p>你可曾看到有许多人在坠落<br>他们的思想被活活渴死在沙漠<br>你可曾看到有许多人很冷漠<br>他们的情感被活活渴死在部落<br>圣皇陛下 请快施舍你的口粮<br>让你的孩子们得到必要的成长<br>圣皇陛下 请快拆除那堵心墙<br>欲望与幻想就会一拥而上</p></blockquote><blockquote><p>枯萎的菊花 张大嘴巴<br>呜呜的诉说着救救我吧<br>满天玉屑 戏舞缠绵<br>细语笛鸣 散向人间</p></blockquote><blockquote><p>凝望着无聊的世界在唱<br>恐惧的眼中是无望的凄凉<br>凝望着无聊的世界在唱<br>恐惧的眼中是无望的凄凉</p></blockquote><p>欲望或者绝望 在你身边周围 它们上下纷飞<br>欲望或者绝望 在你身边周围 它们上下纷飞<br>胡说！你在胡说！你在破坏着人们的习惯<br>胡说！你在胡说！你在破坏着人们的习惯</p><p>对于我来说，这首歌的魅力大于整部电影。当他在台上唱这歌时，痞气，瘦削，完全shoegaze的范儿，除了躁动，我想不出还有什么其他合适的词语形容。</p><p>摘几句《一次王志文的盯鞋自我修养》里所说的：</p><blockquote><p>娄烨1993年导演拍摄的《周末情人》是王志文少有参演的，当时未被主流认可的电影，另两位主演是贾宏声、马晓晴。这个片可能不怎么样，但片中王志文的形象，简直比一些八九十年代英国盯鞋乐队还要盯鞋。在故事里的最后一场演出中，王志文作主唱的乐队，不听声音只看影像，真有点以为是一队正宗的Shoegaze在演。</p></blockquote><blockquote><p>王志文此段充分展现了,至少看起来像是盯鞋那回事该怎么做：头发得稍微弄卷点，不能太长，也不能短；T不管长袖还是短袖，一定得宽松又长，最好有点垮，不能紧身也不能穿背心，花哨图案不能有，衣长也不能太长，避免hip-hop嫌疑；外面套件黑皮衣还算得体；鞋一定得黑，越黑越好。稍稍欠缺的是，墨镜款式有待商榷，裤子也许再紧点更好。</p></blockquote><p>截了一些图<br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1fhjj21hjn0j30zk0k0wf4.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1fhjjbckzz0j30zk0k00tc.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1fhjj9xuszdj30zk0k00tx.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1fhjj9kp2xsj30zk0k0dgj.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1fhjj90q032j30zk0k0q3i.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1fhjjrfrtshj30zk0k074u.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1fhjjrujf05j30zk0k0gm0.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1fhjjs3wdlrj30zk0k0t99.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1fhjjskgyqkj30zk0k0gm5.jpg" alt></p><p>重温黑冰，看了过把瘾，读了《过把瘾就死》，又读了《空中小姐》、《永失我爱》、《一半是火焰 一半是海水》、《浮出海面》、《动物凶猛》，王朔一跃成为新近最喜欢作家；看天道搜寻出《遥远的救世主》，突然间又对佛学感兴趣；再到周末情人，这一系列的印记都让人为之着迷。</p>]]></content>
     
@@ -273,7 +247,7 @@
     <link href="https://hadidjam.github.io/2017/05/11/%E9%9B%8D%E5%92%8C%E5%AE%AB/"/>
     <id>https://hadidjam.github.io/2017/05/11/雍和宫/</id>
     <published>2017-05-11T12:23:20.000Z</published>
-    <updated>2019-04-17T16:10:43.088Z</updated>
+    <updated>2019-04-17T16:12:26.005Z</updated>
     
     <content type="html"><![CDATA[<hr><a id="more"></a><p>每次去雍和宫都盼望着能拍一些好照片，然而每次回来就不想修了。也许是无从下手。现在的雍和宫太繁杂。<img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcooid04ej340w2hc1ky.jpg" alt><br>红墙绿瓦<br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcooxhu01j33rd2nnu10.jpg" alt><br>这个是建筑屋顶上截取的一部分，单纯觉得花纹、色彩很好看<br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcopdrnwdj34ky0m1kiv.jpg" alt><br>烟雾缭绕中的雍和宫也颇有一番意境<br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcoppkjivj34231gdhdt.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcopv5xv9j33vc2kwnpd.jpg" alt></p><hr><p>地坛与雍和宫的氛围远远不同，一进门就被这些漫步闲庭、游水嬉戏的鸽子所吸引，距离太远，没有拍到戏水画面<br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcoq5lx9ej32ut1bp4qq.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcoqf35scj33jm1n94qq.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcor18o0aj34c12ayb2c.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcorfkrzej34cf1ksu0y.jpg" alt><br>斑驳的红墙绿叶，间或各式建筑<br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcormnxouj34fx1nrh9q.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcowqr13cj33vc2kw4qq.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcpcvbiixj33vc2kw4qs.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcoucescoj33vc2kwkjl.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcov6p9o9j33pe2p27wj.jpg" alt><br>偶然拍下的一张，有点丁达尔的意思<br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcovwacy3j32h63iihdt.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcow7dhoxj33vc2kwkjl.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcowd3tmtj33cd2zjb29.jpg" alt><br>古朴的扇门，古朴的红<br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcoveoxgoj33vc2kwhdu.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcovmw4kxj33tb2makjm.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcoyfny1rj33vc2kwqv6.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcoynuzffj33vc2kxu0x.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcoysqp1uj32vd15ck61.jpg" alt><br><img src="http://ww1.sinaimg.cn/large/005xH7pTly1ffcoyxlbqsj31s80oj4a1.jpg" alt> </p><p>这次修片不甚满意，很多色调没达到自己想要的效果，很多片子由于过于嘈杂的背景导致废掉。 </p>]]></content>
     
@@ -295,7 +269,7 @@
     <link href="https://hadidjam.github.io/2017/04/26/%E8%BF%87%E6%8A%8A%E7%98%BE%E5%B0%B1%E6%AD%BB/"/>
     <id>https://hadidjam.github.io/2017/04/26/过把瘾就死/</id>
     <published>2017-04-26T20:18:23.000Z</published>
-    <updated>2019-04-17T16:10:43.088Z</updated>
+    <updated>2019-04-17T16:12:26.005Z</updated>
     
     <content type="html"><![CDATA[<p>应该是看的王朔的第一本小说，第一次就陷入。说起来还是因从王志文。重温黑冰后，找来了他一系列经典的剧来看，包括这部《过把瘾就死》。当年的王志文还演绎着桀骜不驯的青年，一共八集，都是方言与杜梅间的分分合合。这是唯一一部我觉得剧书一致的剧，看完剧再看书，每一处画面都与书中情节对得上，不得不说以前的电视剧经典，情节不拖沓，推进快，有些情节不看书可能也无法get，还是先看书比较好。</p><blockquote><p>杜梅就像一件兵器，一柄关羽关老爷手中的那种极为华丽锋利无比的大刀——这是她给我留下的难以磨灭的印象。</p></blockquote><p>也许每个女人都是一件兵器，在面对爱情这个最重要的话题时，都自带锋芒和尖锐，在一次次进攻面前，使男人败下阵来，疲于应对。方言和杜梅也不例外。很多人说杜梅太作了，我更多感受到的是真实。大概每一个女人面对生命中的羁绊时都会这样，不使点小性子难以真性情，不作的大概是换了另一种方式作，亦或是根本不爱，待在那个区域里无关痛痒着。为什么喜欢看王朔？他把男女之间的那点情感真实、透彻地表达出来了，多看几本，就会发现他的书中男女主大都有相似的情节。</p>]]></content>
     
@@ -322,7 +296,7 @@
     <link href="https://hadidjam.github.io/2017/04/26/%E5%A4%A9%E9%81%93/"/>
     <id>https://hadidjam.github.io/2017/04/26/天道/</id>
     <published>2017-04-26T15:53:35.000Z</published>
-    <updated>2019-04-17T16:10:43.088Z</updated>
+    <updated>2019-04-17T16:12:26.005Z</updated>
     
     <content type="html"><![CDATA[<p>看了一部剧，久久不能忘怀。</p><p>天道是什么，道法自然是什么，还没有真正领悟，也没能理解剧中的很多意思，只能说是似懂非懂，站在模糊的边缘。智慧、阅历、秉性的差异，是一道无法忽视无法逾越的横沟。感触最深的几点：小人物眼界、思想的局限制约了他的发展，其结果只能可怜可悲可叹；精神在同一阶级的人才可能相互交流，也存在彼此理解这一说，不在同一层面的交流，于己于他都是缚累；最难得为实事求是，却被小人之心所度；天国之恋的纯粹，只应曲高和寡之人才能懂，那种高精神层面的感情和极致，已不是俗世所能理解的。</p><p>一开始是被养儿防老的言论所吸引，现在感叹于自己水平的浅疏，看不透太多东西，又被丁元英和芮小丹的这种至纯之爱所感动。一开始觉得丁不食人间烟火，无所问事。慢慢地感觉到这个人物丰满起来了，也是基于现实生存，只不过把生存的外界需要降到了最低，靠茶道、音乐的纯粹以及对一切世俗居高临下的包容,求得精神世界的一片净土。</p>]]></content>
     
@@ -350,7 +324,7 @@
     <link href="https://hadidjam.github.io/2017/04/11/%E6%88%91%E4%BB%AC%E6%97%B6%E4%BB%A3%E7%9A%84%E7%A5%9E%E7%BB%8F%E7%97%87%E4%BA%BA%E6%A0%BC/"/>
     <id>https://hadidjam.github.io/2017/04/11/我们时代的神经症人格/</id>
     <published>2017-04-11T20:07:48.000Z</published>
-    <updated>2019-04-17T16:10:43.088Z</updated>
+    <updated>2019-04-17T16:12:26.005Z</updated>
     
     <content type="html"><![CDATA[<p>很早就读完了这本书，一直没时间整理。算是第一本接触心理学的书，并且真的收获了很多，很想认真整理并记录下来。但这可能也成为完成的一个阻碍了。总想在一个适宜的大块时间，轻松惬意心无旁骛地做这件事情，奈何总也找不到，终于得闲想要整理时，书的内容也已忘记大半。</p><p>抛开内容不讲，在读的过程中，越读会越觉得我也有这样或那样的问题，一如书中所讲，分毫不差。感叹心理学神奇的同时，迫切地想要进一步探究、剖析自己，把那些似曾感受到又未能准确描述的东西挖掘出来。这个时代，似好或坏，总是以很快的节奏进行着，什么都讲求一个“速”，都企图以最少的时间，花费最少的成本获取高额的潜在回报。这样一个时代下的我们，多少都带着点儿神经病，不管是孤独独立的人格，还是作为家庭的父母亲，亦或是作为拼争的社会人。在这本书里，你都可以找到自己的定位，这也是我忍不住想推荐所有人阅读的原因。</p><p>内容确已遗忘许多，待重新阅读后补上。</p>]]></content>
     
@@ -378,7 +352,7 @@
     <link href="https://hadidjam.github.io/2017/03/22/%E9%87%91%E8%89%B2%E6%A2%A6%E4%B9%A1/"/>
     <id>https://hadidjam.github.io/2017/03/22/金色梦乡/</id>
     <published>2017-03-22T20:18:01.000Z</published>
-    <updated>2019-04-17T16:10:43.088Z</updated>
+    <updated>2019-04-17T16:12:26.005Z</updated>
     
     <content type="html"><![CDATA[<p>第一次看伊坂的作品，刚开始只是单纯被书的名字吸引，从来没有想到它会是一部推理作品，看完后，又觉得不仅仅是一部推理作品那么简单，它引起共鸣的地方那么多，我不能不写下来。</p><p>故事情节不详述，我觉得它最有魅力的地方并不在于故事的情节安排有多么精妙，恰恰是一个平凡普通却又引起共鸣的故事才直击人心。说到底，这是一个我们每个人在一生中都会遇到的境况，当被别人误解，当不被信任，当所有的不利都指向你时，你该怎么做，当这种境况上升至威胁生存程度，上升至你无法对抗的程度时，你还期望弄清所有的黑白曲直吗？能不能靠着智慧和毅力生存下来都是问题。这部书里有太多我想说的地方，下面分几个小部分，都是看到作者写的某一部分有感而发。</p><ul><li><p>青柳雅春<br>男主，从一个小有名气的快递员到莫名其妙被卷进谋杀首相的案件，几乎一直都处于逃亡状态，虽然并不知道为什么会被指控，但他唯一清楚地知道的事情就是“逃”，不论是好友森田森吾还是父亲都这样告诉他“逃吧，赶紧逃”。但他也仅仅是一个普通人，面对突如其来的灭顶之灾，他有过悲伤、愤怒、无助，强迫自己冷静下来寻求出路。作者并没有被把他塑造成一个高智商自救的自我反抗人物，他只是同我们一样的一般人。普通人的心理活动和起伏他都真实地表现出来了。所以我在看的时候，曾想，假设我们经历这样的事情，也并不一定有他做的好。亡命天涯，疲于奔命之时，最惧怕的恐怕不是饥饿和追杀，而是一直以来支撑自己的紧绷的最后一道防线突然崩塌。会累，会想放弃，会接受现实，不再无谓地挣扎。当青柳雅春坐进警察的车里，当他试图打开车门冲下去的最后一丝希望也破灭的时候，他大概也是这样想的吧。作者把人性中最真实的感受，在一个极端的环境下，最真实地表现出来，不得不说，很难得。</p></li><li><p>三浦<br>文中我最喜欢的一个角色，甚至死的时候，我还落泪。刚开始是被塑造成马路杀人狂形象，并没有想到他后面会在青柳的逃亡旅程中参与那么大的一部分，可以说他是青柳在逃亡路上的“导师”和帮手？作者安排他，简直就是给青柳开buff啊，这助攻太强，出场也很拉风。三浦刚开始出场的时候，就是青柳坐在警察车里之时。当青柳放弃最后一丝希望之时，瘦小的带着帽兜的三浦开着一辆小车直接撞向了警车。当然三浦的本意并没有要救青柳，只不过他认为自己站在警方的对立面，所以对青柳更有好感？总之，很随意，他救了青柳并把他带到出租屋，让他填饱肚子。还下了药，目的是让他好好睡一觉，要逃亡，总要有充足的体力啊。三浦离开后并没有停止关注青柳，他一边帮忙寻找冒充青柳的那个替身，一边给青柳提供各种外挂信息。比如，在青柳逃亡中占据重要地位的道具“黄色小破车”。即使前女友樋口晴子有心帮助他，如果没有三浦的提示，青柳可能就会在阴差阳错中错过这一关键装备。我最心疼的部分在于三浦的结局。本是帮助青柳寻找替身，却因得到的假消息而失去了自己的生命。即便之前已被假装的替身刺伤，在他领青柳走进病房时，仍然强忍疼痛，最终倒下。我脑海里能够浮现出那个画面，悲伤的但又有种解脱的味道，然而我写不出来它的千分之一。我只觉得三浦靠在病房墙边倒下的那一瞬间，窗帘拉开的间隙和他的周围都散发着某种光亮。本希望他陪青柳一直走完接下来的逃亡之路，但也许这才是他最好的结局吧。</p></li><li><p>陌生人<br>文中出现的各种陌生人对青柳的帮助，莫名地让我感动。不像想象中的那般先入为主或冷漠无情，这些陌生人在精神上或物质上多少给了青柳一些慰藉。停车场偶然遇到的一帮中学生，为他打气，毫不犹豫地互换衣服；三浦给他的各种帮助；流浪汉大叔帮忙播放录音从而救出阿一；蹲守的老警察没有上报青柳的闯入；医院偶然碰面的病人帮忙其从下水管道逃走……没有这些信任或帮助，青柳可能坚持不到最后一刻。当周围充斥着各种怀疑和厌恶的情绪，还能有陌生人选择你这一边，是一件多么简单又不简单的事情。看到这些情节让我莫名地兴奋，就好像男主逃亡路上总会绝处逢生，庆幸那些从未言明的善意。</p></li><li><p>好朋友<br>另一个让我感叹的事情大概是青柳与那些好朋友之间的情谊。最执着的大概是前女友樋口晴子。即便是前女友，在知道事情的一瞬间，她还是立即用了自己能想到的仅存的办法去帮助重重困境中的他，尽管希望渺茫，但还是义无反顾地做了。尤其是发现青柳留在车里的纸条后，她写下的那三个简单的字“我知道”。我不知道这三个字对青柳的内心有多大的触动，但我知道那种当你被全世界误会，有多么渴望一个肯定的感受，那种不需要任何解释就站在你身边的信任。至于森田和阿一的角色，我不想多说。也许说起来太复杂。毕竟人都是要长大，就像文中说的“现在已经回不到过去了。虽然曾经有那样一条路，但不知何时大家都渐渐老去了。”每个人都踏进了不同的河流，自学生时代后，渐渐分别，远离，可能相遇可能再也不见，再见之时，已是分辨不出当初的陌生模样。大概是一条亘古不变的真理：任何关系都从高昂到冷却，中间注入的都是时间的厚度和陌生的灰尘。即使有心拂去，也害怕接受真实的丑陋，都是些日渐背离的刻痕。</p></li><li><p>父母<br>“直到最后一刻都要站孩子一边，这就是父母呀。”有一段写青柳雅春努力压制眼泪的描写很让人动容。看见父亲在媒体前拼命维护自己，让自己快逃的样子，他害怕号啕大哭，害怕眼泪会消耗掉自己的意志，他是一个逃亡的人啊。他只能永不停歇地逃下去。也许，世界上唯一一种无条件的爱便是父母对孩子的感情了。（不过，看了《我们时代的神经症人格》，对这一点有了些怀疑，有些父母的爱大概是对爱的一种病态需要。由于缺乏令人满意的情感关系，便把对爱的需要释放到子女身上。这种爱并不是正常的、父母与子女之间的情感内涵。当然这里扯远了，只是突然想到现在很多父母和子女之间的情感问题也很复杂，并不总像我们想象的那样无私、美好、伟大。）</p></li><li><p>小丑鱼和烟火<br>这两个意象是我文中比较喜欢的。小丑鱼是晴子之前玩游戏养的一条小丑鱼，它总会说一句“你呀，可不能安于现状。”很简单的一句话，却很有分量吧。甚至我也想养这么一条小丑鱼了。“安于现状”，总是自己察觉不到而在他人说出的那一刻猛然开始恐慌。很容易就会陷入到这么一种境况当中。烟火是我比较喜欢的另一个意象。当天空上方绽放花火，总有一个人跟你一样，在同一时刻的不同地点，抬头伫足，不是一种很奇妙的体验吗?我总是倾向于相信平行时空的存在，我觉得这是一种美妙的想法。千千万中的我，总有一个能满足现存的期冀，这样想着，或许能更坚定地走下去。</p></li></ul><p>这本书真的有太多可写的内容了，我仅仅挑了一些感触最深的东西。涉及更深层面的内容（舆论操纵，国家机器等），不过多谈论，这些问题上总是有太多分歧和争执，我也不喜欢讨论政治。只不过有些情节让我迷之想起恐怖直播。另外，我也找来了电影版，仅仅看了开头就马上关掉了，我害怕它摧毁一些文字在我脑中构建的形象。青柳是LEGAL HIGH的男主演的，对他并无好感，也不喜欢看LEGAL HIGH（不知道周围的人为什么对它评价那么高），跟我想象中的青柳太不一样了。最重要的是不想破坏我心目中的三浦。</p>]]></content>
     
@@ -406,7 +380,7 @@
     <link href="https://hadidjam.github.io/2017/03/16/%E7%8E%89%E6%B8%8A%E6%BD%AD/"/>
     <id>https://hadidjam.github.io/2017/03/16/玉渊潭/</id>
     <published>2017-03-16T22:19:33.000Z</published>
-    <updated>2019-04-17T16:10:43.088Z</updated>
+    <updated>2019-04-17T16:12:26.005Z</updated>
     
     <content type="html"><![CDATA[<hr><a id="more"></a><p><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/46341583.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/62995934.jpg" alt></p><p><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/7591145.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/83360044.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/81784801.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/19652202.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/51842105.jpg" alt></p><p><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/94208049.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/91919603.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/50245691.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/55622983.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/20286436.jpg" alt></p><p><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/86491719.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/19659161.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/46389702.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/33544595.jpg" alt></p>]]></content>
     
@@ -428,7 +402,7 @@
     <link href="https://hadidjam.github.io/2017/03/13/%E6%BC%AB%E9%95%BF%E7%9A%84%E5%91%8A%E5%88%AB/"/>
     <id>https://hadidjam.github.io/2017/03/13/漫长的告别/</id>
     <published>2017-03-13T22:10:54.000Z</published>
-    <updated>2019-04-17T16:10:43.088Z</updated>
+    <updated>2019-04-17T16:12:26.005Z</updated>
     
     <content type="html"><![CDATA[<hr><a id="more"></a><p>漫长的告别，拖了好几天才来写，主要是想等我看完日剧版的最后一小部分，但最近怎么都不想看，所以还是尽快把这篇写完吧。能看到我摘录了中英两个版本，一开始我是抱着必看完的决心看英文原版的，但终于还是被各种生词打败，在急于知道剧情走向心理的驱使下，我忍不住翻开了中文版。两个版本各有千秋，英文版我能看懂大致意思，也更原汁原味，中文版有些段落会更有意境些，便于理解。虽然越往后看，已经能大致猜出凶手是谁，但还是会一鼓作气地看下去，好书大概就是有这样的魅力。全篇最喜欢这样一句话：To say goodbye is to die a little. 当然我还去找了剧版，略惊讶的是：不是美剧而是日剧，一直理所当然地认为发生在美国应该拍成美剧。不过看了日剧改编的，发现也别有一番味道，甚至与原作要表达的那种氛围很契合。下面又是上图了。</p><p><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/89897109.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/40242898.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/75292317.jpg" alt><br>一开始就是这首歌 很喜欢这两句</p><blockquote><p>To say goodbye is to die a little </p></blockquote><blockquote><p>Just like the beginning of dying for a moment</p></blockquote><p>从网易云找来了链接，可惜不是剧中的这个版本，不过也相当好听了。（这剧中的BGM都很有味道） </p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=37820263&auto=1&height=66"></iframe><p>截了很多关于酒杯的特写镜头，在我看来，酒大概是将整个故事、各种人物串联起来的一条隐没的线吧。一开始马洛与特里的相遇，二人在酒吧的相熟，以及后来与女主、其丈夫、特里死去的妻子之间发生的交缠纠葛均与酒有着些微的联系。<br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/27862291.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/68505201.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/20302330.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/16907093.jpg" alt></p><p>比较喜欢剧里的氛围，多截了些图。一种是前四张这种温暖、发黄发旧的画面。饱和度、明度都较低，画面整体看起来舒服、安静，有空气的斑驳感，跟常见的日系的干净清新略有不同。<br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/21905019.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/99399859.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/68020613.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/77155954.jpg" alt></p><p>另一种就是后四张这种比较清冷的感觉，晦暗、冷色调为主。<br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/69027201.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/11462415.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/7812561.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/19137404.jpg" alt></p><p>也许是隔了几天才写，已经没有刚读完的那种心情，但在我们的生活中，The long goodbye 确实一直在以各种方式进行，与亲友告别，与过去告别，最难的大概是与自己告别。<br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/27279477.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/28120499.jpg" alt></p>]]></content>
     
@@ -452,7 +426,7 @@
     <link href="https://hadidjam.github.io/2017/03/02/%E7%BE%8E%E7%8B%84%E4%BA%9A/"/>
     <id>https://hadidjam.github.io/2017/03/02/美狄亚/</id>
     <published>2017-03-02T11:14:57.000Z</published>
-    <updated>2019-04-17T16:10:43.088Z</updated>
+    <updated>2019-04-17T16:12:26.005Z</updated>
     
     <content type="html"><![CDATA[<hr><a id="more"></a><p>昨天晚上删掉村上的书后，我看了这本书并看了同名电影。严格来说，这是个剧本，别人推荐的。我还是第一次看剧本，颇为好奇。剧本很短，大概两万字。遗憾的是，由于txt格式并没有做摘录。</p><p>剧本直接描写了整个故事的最高潮部分，即伊阿宋将与国王的公主结婚而抛弃美狄亚，可怜的美狄亚遭到国王驱逐的部分。悲伤愤怒之下，美狄亚不惜利用自己的孩子为公主送去涂满毒药的礼物，展开自己的复仇计划。最终，为免于孩子遭到更残忍的杀害，美狄亚亲手杀死了自己的两个孩子。剧本很有感染力，台词也很有节奏感，甚至美狄亚和伊阿宋争吵那部分的台词，我都快唱出来了，像rap一样，非常的朗朗上口  :joy:</p><p>随后我在b站上找来了电影看，对整个故事有了更完整的了解，当然对比剧本还有很多改动的地方。抛开这个不说，电影的色调是给我的一大惊喜，这正是我一直想要的色调，忽略渣画质的话。我惊讶于1969年的片子还能拍出来这种感觉。下面一边放图一边说吧。</p><p>我是跳着看的，大概从美狄亚帮助伊阿宋偷得金羊毛并离开故乡开始。截图是美狄亚父亲及族人发现金羊毛丢失，赶来追伊阿宋一众人，却在路上不断发现美狄亚弟弟的尸块。美狄亚指使弟弟帮助偷窃金羊毛，带其逃出后，便在路上的马车里残忍地杀害了弟弟并分尸，弟弟的尸体被扔了一路。这部分我没截图，而且画面也没有太多分尸的特写镜头，留下了更多的想象空间，也许正是这种空白才更让人不寒而栗。（ps:感觉这样的色调很美，荒凉的沙漠，昏黄色和粉色的糅合。）<br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/10709849.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/54520855.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/55044632.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/93116795.jpg" alt></p><p>美狄亚跟随伊阿宋翻越沙漠，回希腊。第三张太美好。<br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/91124415.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/44328566.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/18400390.jpg" alt></p><p>同一场景的三种不同色调，也许有三种不同的含义。第一张是众侍女听闻伊阿宋携金羊毛归来时去向国王禀报，第二张众侍女为美狄亚更换当地服装，第三张是伊阿宋带美狄亚见过国王后走出城堡时的场景。<br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/75760239.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/6926106.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/55817348.jpg" alt></p><p>美狄亚房间内的两只小猫。<br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/59847522.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/87983742.jpg" alt></p><p>美狄亚听到伊阿宋与公主结婚的消息，悲痛不已。这时美狄亚从房间内看到the light of God，受到神祇启示的她，坚定了要复仇的决心。<br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/49457596.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/89402180.jpg" alt></p><p>她叫来伊阿宋，假意与其复合，并让两个可爱的孩子为公主带去结婚礼物——美丽的衣物和冠饰，上面却涂满了毒药。<br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/59357482.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/84820311.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/92373402.jpg" alt></p><p>在这里，电影与剧本有所出入。剧本中是美狄亚让两个儿子为公主送去礼物，公主穿戴衣物后因毒物而全身燃烧，国王惊慌失措抱住公主，却也被沾染毒物随即同公主一起死去。伊阿宋跑来质问美狄亚并要求带走孩子，而同时美狄亚为防止孩子遭到更残忍的杀害已亲手结束了孩子的生命。在电影中，公主第一次穿戴衣物时并没有死去，只是受到惊吓，因此国王为了公主的安危，要求驱逐美狄亚。此后美狄亚又叫儿子为公主献去结婚礼物，公主穿戴后，随即全身被火包围，并跑到截图中的地方，从最高处跳下身亡，国王看见后一同跳下。这是与剧本有所出入的地方。<br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/35840859.jpg" alt></p><p>最后便是结尾。虽然电影有所改动，但可以接受。最主要的是我很喜欢电影中的色调，有种莫名的和谐，这就是我一直寻找的日剧中的昏黄色调，但更多加入了粉色、淡绿色，画质并不影响我对它的喜爱。<br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/96370524.jpg" alt></p>]]></content>
     
@@ -476,7 +450,7 @@
     <link href="https://hadidjam.github.io/2017/03/01/%E4%B8%96%E7%95%8C%E5%B0%BD%E5%A4%B4%E4%B8%8E%E5%86%B7%E9%85%B7%E4%BB%99%E5%A2%83/"/>
     <id>https://hadidjam.github.io/2017/03/01/世界尽头与冷酷仙境/</id>
     <published>2017-03-01T17:06:35.000Z</published>
-    <updated>2019-04-17T16:10:43.073Z</updated>
+    <updated>2019-04-17T16:12:26.005Z</updated>
     
     <content type="html"><![CDATA[<p>先来说说这本书吧，顺便说一下，没有摘抄，因为尚未看完便删掉了这本书。</p><p>怎么说呢，一直以来都对村上有种异样的感觉。也许受了太多先入为主的影响，我已经搞不清他的水平究竟处于何处，即是否真的如大多数人所说，有一种独特的孤独的治愈魅力。想要一探究竟的心情被搁置许久后，终于又重新燃起了些许希望。其实很久以前读过他的1Q84，大概是ABAB形式，读不习惯，而且总有一种矫揉造作不知其所云的错觉，读了一小部分便放弃。这次读这本书，也是为了验证一下我的错觉是否正确。</p><p>刚开始读时，我便陷入了之前的境况。我努力集中精神读每句话，但仍然不知道作者在说些什么，“每个字都认识，连起来却理解不了”。我深信作者写这么多无关的场景也好心理也罢必有其深意，但抱歉，我还真看不出来这深意对于他想表达的这个故事有何帮助。说到底，每个作者都是在为大家讲一个故事，听故事的人听得舒服流畅，能身临其境沉溺其中，我认为便是一个好故事了，不在乎语言的多少及幽美哀伤，况且在我看来这其中很多词语过于繁琐讲究，反而让人的注意力都集中到词语的遣造上而忽视作者想要表达的含义了。</p><p>奈于探寻故事结局的好奇心，我还是读到了30%左右。越读越怀疑自己，我担心这本书并没有其名字所显示的那般引人入胜。我搜索了微博，大部分是一些段落的摘抄，关于此书的评价倒很少。而后搜索了知乎，评价倒是有的，只不过并不是我想看到的不同的声音。豆瓣上，我发现有人对比了不同的译本，差异竟如此之大，很可能就是这个原因才直接影响了我对村上的感观。总的来说，在大陆我们看到的基本是林少华的译本，而台湾地区则是赖明珠的版本。看过一些译本段落的对比后，能够明显看出译本在语言、氛围等很多方面都存在区别。不得不说，林少华的文字很有底蕴，但给我的感觉是过于讲究遣造致使理解起来颇费力，有的句子我得读上两三遍才能理解最基本的表达意思，而且总给我一种疏离、冷清略微压抑之感。虽然没有完整读过赖明珠的版本，但仅仅是一些段落，显然我更能理解这种平白简单无多余的词句，而且颇有一种轻松或许还有点小幽默的感觉。同一本书，氛围差异如此之大。另外，值得一提的是，两个译本在书名方面也有着各自的风格。林少华将其译为“世界尽头与冷酷仙境”，赖明珠则译为“世界末日与冷酷异境”。“世界尽头与冷酷仙境”固然好听，也颇有文艺之风，但不了解书内容的人只凭名字大概会认为这是一本文艺情感类亦或童话梦幻的书吧。实际上，这却是一本冷科幻的书，从这个角度来说，还是“世界末日与冷酷异境”更忠于原文的旨意吧。</p><p>经过一下午的搜索，都没找到赖明珠版本的mobi格式，找到的都是林少华版本，最后终于放弃并删掉了这本书。虽然可能是由于译者的文字风格而影响我对他的认知，但不得不说，我对他还是不甚喜欢，更多的是直觉上的无感？</p>]]></content>
     
@@ -504,7 +478,7 @@
     <link href="https://hadidjam.github.io/2017/02/11/%E7%BD%97%E7%94%9F%E9%97%A8/"/>
     <id>https://hadidjam.github.io/2017/02/11/罗生门/</id>
     <published>2017-02-11T22:25:44.000Z</published>
-    <updated>2019-04-17T16:10:43.088Z</updated>
+    <updated>2019-04-17T16:12:26.005Z</updated>
     
     <content type="html"><![CDATA[<hr><a id="more"></a><p><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/40559020.jpg" alt></p><p>偶然在电视上看到评分九点多，又怀揣着对日本文学家的迷之好感看了这部黑白电影，比想象中的更要吸引我。很早就听过《罗生门》，一直没看过书，这次先看电影好了。</p><p>电影开头的画面就很美，虽然是黑白，仍然挡不住它的简洁和线条美。一座破败的庙宇前，外面下着倾盆大雨，雨滴不停地打落在地面上。寻求避雨的乞丐，柴夫，和尚，三个迥然不同的人物相聚在一起，开始讲述一个故事，一个无人能说出真相的故事。<br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/1928798.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/16592875.jpg" alt></p><p><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/96512981.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/64864151.jpg" alt></p><p>这个故事其实很简单，却又复杂到无法评说。电影画面始终在一段夏日的密林当中进行，随着讲述人：柴夫——和尚——强盗——妻子——武士的变换，故事的版本也已让人分辨不清孰真孰假，不变的仍然是那段密林和夏日的焦灼，还有人性的自利。<br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/50561540.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/53064519.jpg" alt></p><p>看完后，我最感兴趣的还是电影的叙事风格（很紧凑）和画面，尤其画面，美到每一帧我都想截下来，印象最深的是柴夫，和尚，强盗，妻子，武士在分别讲述自己的故事时的构图。黑白的背景，无杂乱且更纯粹，坐位的安排显出层次又有距离的实感。<br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/45166776.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/51001764.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/61352045.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/48983458.jpg" alt></p><p>另外，阳光穿透树林，斑驳的光影投射在地上的叶片上——这一画面也让我为之惊叹。一直都很喜欢阳光穿透的感觉，但没想到黑白电影里也能有这么强的表现力，或许比彩色的感觉更出色，层次感、斑驳感都有，影调很丰富。<br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/59170894.jpg" alt><br><img src="http://ozcxwjepj.bkt.clouddn.com/18-1-17/1321130.jpg" alt></p><p>又要日常庆幸了，庆幸自己看到这么一部好电影。事实证明，尽管是1950年的片子仍然有不可抵挡的魅力，尽管大多数同名影视作品不如原作，但这一部，是例外。值得一看。</p>]]></content>
     
@@ -528,7 +502,7 @@
     <link href="https://hadidjam.github.io/2017/02/11/%E5%9F%BA%E7%9D%A3%E5%B1%B1%E4%BC%AF%E7%88%B5/"/>
     <id>https://hadidjam.github.io/2017/02/11/基督山伯爵/</id>
     <published>2017-02-11T19:43:45.000Z</published>
-    <updated>2019-04-17T16:10:43.073Z</updated>
+    <updated>2019-04-17T16:12:26.005Z</updated>
     
     <content type="html"><![CDATA[<p>这应该是假期我做的最成功的一件事了，不经意间原来我也能读完两万页字。经历过更艰难的，你才会发现艰难的事情其实忍忍就过去了。刚开始读时，故事并没有多吸引我。直到唐泰斯被投放到地牢并与神甫开始策划逃出时，我感觉到有点意思了，文学版的越狱。但实际上越狱的情节并没有很长，我还纳闷如此精彩的情节应该用更多的笔墨来描写啊。看到最后，才明白这样的安排是有道理的，因为越狱仅仅是唐泰斯心中酝酿的伟大复仇计划的开始，逃出地牢与后面宏大缜密的复仇相比，不足一提。越往后看，我慢慢地被作者缜密的安排和构思所折服。你会发现，前面提到的每一个人物，每一个场景在后面都会具有重要的意义，并不是无足轻重，也不是一闪而过。可以说，到最后，我感觉整个故事又绕成了一个圈，每个人物都围绕着唐泰斯相互交织缠绕，关系错综复杂，到这里你已经不知道是唐泰斯刻意制造联系，还是命运自身的安排。整个复仇计划以隐忍而开始，一步一步地膨胀、扩大、变为现实，最终却以唐泰斯的自我救赎和释怀而结束。满怀希望又破灭，怀揣着复仇的单一目标而支撑自己，终于走到最后阶段时，却发现往昔已不再，现在的人事再也不是过去留在自己心中的甜美回忆了，我想，与梅塞苔丝的最后一次谈话大概让唐泰斯释怀了很多事情，他放下了过去，最后也收获了自己的幸福。</p><p>另外，阿尔贝子爵也是我很喜欢的一个人物，初看时，我对他并没有很深印象，甚至认为可能就是一个只知游山玩水的巴黎贵族，因为作者更多的笔墨放在了他的同伴弗朗兹身上，而且有些情节也是以弗朗兹的角度来写。从阿尔贝回到巴黎，而唐泰斯应邀去拜访子爵时，可以说是基督山伯爵通过子爵这个通口真正打开他在巴黎复仇计划的开始。从后来为父决斗，又携母出走，能感觉到阿尔贝是一个勇敢又深明大义的贵族青年。更难能可贵的是，在知道父亲当年背叛的事实后，他还能主动向伯爵伸出手去道歉，这一举动不仅没有失掉身份，还提高了他在一众见证决斗的人中的形象。与母亲离开现有的家后，他首要的任务是将自己的母亲安顿好并宽慰她，同时他也没有就此沉丧下去，而是积极地入伍参军，为自己找了一条未来的路。自己吃再多苦都无所谓，他唯一的牵挂和支撑的力量可能也就是母亲了吧。看到阿尔贝登上远去的帆船，而母亲站在原地遥望，并转身默默流泪的情节，我也被感动了。为阿尔贝没有被困难打垮而感动，为他颠覆了我之前的印象而感动。</p><p>总之，我庆幸自己读完了这样一本好书，甚至还找来了各种影片试图去看，结果发现没有一部能与我心中树立的形象相契合，索性放弃，不如就让这些美好鲜活的人物存于脑海中吧。我还想过，以后如果我有了孩子，我一定会让他/她读这本书。</p>]]></content>
     
@@ -547,6 +521,33 @@
       <category term="reviews" scheme="https://hadidjam.github.io/tags/reviews/"/>
     
       <category term="books" scheme="https://hadidjam.github.io/tags/books/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>collection</title>
+    <link href="https://hadidjam.github.io/2017/01/31/collection/"/>
+    <id>https://hadidjam.github.io/2017/01/31/collection/</id>
+    <published>2017-01-31T10:42:34.000Z</published>
+    <updated>2019-04-17T16:12:26.005Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="artist"><a href="#artist" class="headerlink" title="artist"></a><code>artist</code></h2><ul><li>jeremy allen white</li><li>yooksungjae</li><li>kento yamazaki</li><li>parkbogum</li><li>jaychou</li><li>samsmith</li><li>王志文</li></ul><h2 id="writer"><a href="#writer" class="headerlink" title="writer"></a><code>writer</code></h2><ul><li>太宰治</li><li>三毛</li><li>杜拉斯</li><li>毛姆</li><li>伊坂幸太郎</li><li>王朔</li><li>加缪</li><li>卡伦霍妮</li></ul><h2 id="music"><a href="#music" class="headerlink" title="music"></a><code>music</code></h2><ul><li>Yêu Lại Từ Đầu——Defsoul</li><li>I’m not the only one——Sam Smith</li><li>You——Bobby Tinsley</li><li>EVERYTHING——黑裙子</li><li>穆索尔斯基——图画展览会 漫步</li><li>朱桦——假如还有来世</li></ul><h2 id="book"><a href="#book" class="headerlink" title="book"></a><code>book</code></h2><ul><li>人间失格</li><li>再见了克鲁</li><li>遥远的救世主</li><li>过把瘾就死</li><li>一个人的朝圣</li><li>平静的生活</li><li>瓦尔登湖</li><li>基督山伯爵</li></ul><h2 id="film-drama"><a href="#film-drama" class="headerlink" title="film drama"></a><code>film drama</code></h2><ul><li>天道</li><li>无悔追踪 </li><li>被嫌弃的松子的一生</li><li>燕尾蝶</li><li>黄海</li><li>追击者</li><li>恐怖直播</li><li>杀人回忆</li><li>新世界</li><li>金福南杀人事件始末</li><li>鬼灯的冷彻</li><li>我的危险妻子</li><li>请回答1988</li><li>Shameless</li><li>GoT</li><li>Man Seeking Woman</li><li>The Outs</li><li>Stranger Things</li><li>罗生门</li><li>The good fight</li><li>Homeland</li><li>美狄亚</li></ul><h2 id="podcast"><a href="#podcast" class="headerlink" title="podcast"></a><code>podcast</code></h2><ul><li>子夜书社</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;artist&quot;&gt;&lt;a href=&quot;#artist&quot; class=&quot;headerlink&quot; title=&quot;artist&quot;&gt;&lt;/a&gt;&lt;code&gt;artist&lt;/code&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;jeremy allen white&lt;/li&gt;
+&lt;li&gt;yooksun
+      
+    
+    </summary>
+    
+      <category term="collection" scheme="https://hadidjam.github.io/categories/collection/"/>
+    
+    
+      <category term="tbc" scheme="https://hadidjam.github.io/tags/tbc/"/>
     
   </entry>
   
